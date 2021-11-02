@@ -1,3 +1,46 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#menu {
+  height:100%;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  background-color: #E7ECEF;
+}
+#menu-info {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 0;
+}
+ul#track-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+}
+#logo {
+
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #274C77;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+}
+.track-label {
+  height:35px;
+  color:black;
+  padding: 8px 16px;
+  background-color:#E7ECEF;
+}
+.track-label:hover {
+  color:white;
+  background-color:#6096BA;
+}
+.main {
+  position:fixed;
+  left:20%;
+}
