@@ -32,7 +32,7 @@ courses = [
         :required_group => '1', 
     },
     {   :call => 12547, 
-        :number => "COMS W4115", 
+        :number => "COMS W4115",
         :title => 'PROGRAMMING LANG & TRANSL', 
         :pts => 3, 
         :description => 'some intro for PLT',
@@ -42,8 +42,20 @@ courses = [
         :elective => 1, 
         :elective_group => '1', 
         :required_group => '1', 
+    },
+    {   :call => 12539,
+        :number => "COMS W4118",
+        :title => 'OPERATING SYSTEMS I',
+        :pts => 3,
+        :description => 'some intro for OS',
+        :track => 'Software System',
+        :breadth => 'B2',
+        :required => 1,
+        :elective => 0,
+        :elective_group => '0',
+        :required_group => '0',
     }
-    ]
+]
 
 courses.each do |course|
   Course.create!(course)

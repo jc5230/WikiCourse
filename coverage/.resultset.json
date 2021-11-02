@@ -1,6 +1,21 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/features/support/paths.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1
+        ]
+      },
       "/Users/beisu/Desktop/SAAS/WikiCourse/features/step_definitions/course_planning_steps.rb": {
         "lines": [
           1,
@@ -59,6 +74,6 @@
         ]
       }
     },
-    "timestamp": 1635888077
+    "timestamp": 1635889158
   }
 }
