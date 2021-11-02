@@ -1,4 +1,4 @@
-class Track< ActiveRecord::Base
+class Track < ActiveRecord::Base
   belongs_to :courses
 
   def self.all_tracks
