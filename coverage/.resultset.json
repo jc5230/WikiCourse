@@ -1,0 +1,64 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/features/step_definitions/course_planning_steps.rb": {
+        "lines": [
+          1,
+          4,
+          16,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/course.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1635888077
+  }
+}
