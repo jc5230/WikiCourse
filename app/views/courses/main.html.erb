@@ -14,26 +14,54 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>cid</th>
+      <th>call</th>
       <th>title</th>
+      <th>number</th>
       <th>pts</th>
       <th>description</th>
+      <th>track</th>
+      <th>breadth</th>
+      <th>required</th>
+      <th>elective</th>
+      <th>elective_group</th>
+      <th>required_group</th>
     </tr>
   </thead>
   <tbody>
     <% @courses.each do |course| %>
       <tr>
         <td>
-          <%= course.cid %>
+          <%= course.call %>
         </td>
         <td>
           <%= course.title %>
+        </td>
+        <td>
+          <%= course.number %>
         </td>
         <td>
           <%= course.pts %>
         </td>
         <td>
           <%= course.description %>
+        </td>
+        <td>
+          <%= course.track %>
+        </td>
+        <td>
+          <%= course.breadth %>
+        </td>
+        <td>
+          <%= course.required %>
+        </td>
+        <td>
+          <%= course.elective %>
+        </td>
+        <td>
+          <%= course.elective_group %>
+        </td>
+        <td>
+          <%= course.required_group %>
         </td>
       </tr>
     <% end %>
