@@ -3,9 +3,7 @@
   <title>WikiCourse</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/tag-style.css">
 </head>
@@ -16,7 +14,7 @@
   </div>
   <ul id="track-menu">
     <%  Track.all_tracks.each do |track| %>
-      <li class="track-label"><%= track %></li>
+      <li class="track-label"><a><%= track %></a></li>
     <% end %>
   </ul>
   <div id="logo">
