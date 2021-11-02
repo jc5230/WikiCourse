@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def main
-    @all_tracks = Course.tracks.all_tracks
+    @all_tracks = Track.all_tracks
     @selected_tracks = params[:tracks] || {}
     @courses = if @selected_tracks == {}
                  Course.all
@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
 
   end
 
+
   def detail
 
   end
@@ -17,7 +18,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:title, :descriptions)
+    params.require(:course).permit(:title, :description)
   end
 
 end

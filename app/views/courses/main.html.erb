@@ -1,2 +1,41 @@
 <h1>Courses#main</h1>
 <p>Find me in app/views/courses/main.html.erb</p>
+
+
+
+<h1>All tracks: <%= Track.all_tracks %> </h1>
+
+
+
+
+<h2> All Courses </h2>
+
+
+<table class="table table-striped col-md-12" id="movies">
+  <thead>
+    <tr>
+      <th>cid</th>
+      <th>title</th>
+      <th>pts</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td>
+          <%= course.cid %>
+        </td>
+        <td>
+          <%= course.title %>
+        </td>
+        <td>
+          <%= course.pts %>
+        </td>
+        <td>
+          <%= course.description %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
