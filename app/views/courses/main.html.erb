@@ -1,17 +1,53 @@
-<h1>Courses#main</h1>
-<p>Find me in app/views/courses/main.html.erb</p>
+<html lang="en">
+<head>
+  <title>WikiCourse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-
-<h1>All tracks: <%= Track.all_tracks %> </h1>
-
-
-
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tag-style.css">
+</head>
+<body>
+<div id="menu">
+  <div id="menu-info">
+    Select your track:
+  </div>
+  <ul id="track-menu">
+    <%  Track.all_tracks.each do |track| %>
+      <li class="track-label"><%= track %></li>
+    <% end %>
+  </ul>
+  <div id="logo">
+    WikiCourse
+  </div>
+</div>
 <h2> All Courses </h2>
-
-
-<table class="table table-striped col-md-12" id="movies">
+<div class="main">
+<ul class="ks-cboxtags">
+  <li>
+    <input type="checkbox" id="checkboxOne" value="Order one">
+    <label for="checkboxOne">Required Track Courses</label>
+  </li>
+  <li>
+    <input type="checkbox" id="checkboxTwo" value="Order Two">
+    <label for="checkboxTwo">Track Electives</label>
+  </li>
+  <li>
+    <input type="checkbox" id="checkboxThree" value="Order Three">
+    <label for="checkboxThree">Breadth - Systems</label>
+  </li>
+  <li>
+    <input type="checkbox" id="checkboxFour" value="Order Four">
+    <label for="checkboxFour">Breadth - Theory</label>
+  </li>
+  <li>
+    <input type="checkbox" id="checkboxFive" value="Order Five">
+    <label for="checkboxFive">Breadth - AI & Applications</label>
+  </li>
+</ul>
+<table class="table table-striped col-md-12" id="course">
   <thead>
     <tr>
       <th>call</th>
@@ -67,3 +103,6 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</body>
+</html>
