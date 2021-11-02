@@ -1,0 +1,26 @@
+// Place all the styles related to the course_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  * {
+    box-sizing: border-box;
+  }
+  .side {
+    float: left;
+    width:20%;
+    background-color: #E7ECEF;
+    height:98vh;
+  }
+  .wrap {
+    float: left;
+    width: 80%;
+    background-color: #fff;
+    height: 98vh;
+  }
+
+  .main {
+    float: left;
+  }
+
+
+}
