@@ -1,11 +1,12 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/jc5230/WikiCourse/WikiCourse/features/support/paths.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/features/support/paths.rb": {
         "lines": [
           1,
           1,
-          7,
+          null,
+          12,
           null,
           3,
           null,
@@ -13,17 +14,27 @@
           3,
           null,
           null,
-          1,
-          null,
-          null,
-          1,
-          1,
           null,
           1,
           null,
           null,
+          1,
+          1,
+          null,
+          1,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
           null,
           null,
           null,
@@ -33,7 +44,7 @@
           1
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/features/step_definitions/course_planning_steps.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/features/step_definitions/course_planning_steps.rb": {
         "lines": [
           1,
           5,
@@ -42,7 +53,7 @@
           null,
           null,
           1,
-          5,
+          4,
           null,
           null,
           1,
@@ -54,46 +65,48 @@
           null,
           null,
           1,
+          1,
           null,
+          null,
+          1,
           1,
           5,
           null,
           null,
           null,
           1,
-          7,
-          7,
+          6,
+          6,
           null,
           null,
           null,
           1,
-          1,
-          1,
+          4,
+          4,
           null,
           null,
           null,
           1,
+          null,
+          null,
+          null,
+          null,
           2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           1,
           1,
+          null,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/course.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/course.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/courses_controller.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
@@ -102,24 +115,25 @@
           null,
           null,
           1,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
+          9,
           null,
-          7,
-          6,
+          null,
+          9,
+          8,
           null,
           1,
           null,
@@ -132,30 +146,30 @@
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/application_controller.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/helpers/application_helper.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/helpers/courses_helper.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/helpers/courses_helper.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/track.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/track.rb": {
         "lines": [
           1,
           1,
-          17,
+          21,
           null,
           null,
           null,
@@ -169,11 +183,11 @@
         ]
       }
     },
-    "timestamp": 1635970327
+
   },
   "RSpec": {
     "coverage": {
-      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/courses_controller.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
@@ -198,6 +212,7 @@
           null,
           1,
           null,
+          null,
           1,
           1,
           null,
@@ -212,19 +227,19 @@
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/application_controller.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/course.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/course.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/track.rb": {
+      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/track.rb": {
         "lines": [
           1,
           1,
@@ -242,195 +257,6 @@
         ]
       }
     },
-    "timestamp": 1635953563
-  },
-  "Unknown Test Framework": {
-    "coverage": {
-      "/home/jc5230/WikiCourse/WikiCourse/bin/spring": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          89,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/channels/application_cable/channel.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/channels/application_cable/connection.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/helpers/application_helper.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/helpers/courses_helper.rb": {
-        "lines": [
-          0,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/courses_controller.rb": {
-        "lines": [
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/track.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/course.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/models/application_record.rb": {
-        "lines": [
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/jc5230/WikiCourse/WikiCourse/app/mailers/application_mailer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      }
-    },
-    "timestamp": 1635947962
+    "timestamp": 1635972345
   }
 }

@@ -20,6 +20,7 @@ class CoursesController < ApplicationController
     @required = params[:required] ? params[:required].to_i : [1, 0]
 
     @elective = params[:elective] ? params[:elective].to_i : [1, 0]
+    
 
     if !params[:breadth1] && !params[:breadth2] && !params[:breadth3] && !params[:required] && !params[:elective]
      @courses = Course.where(track: @track)

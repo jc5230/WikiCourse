@@ -35,12 +35,12 @@
       <th>number</th>
       <th>pts</th>
       <th>description</th>
-      <th>track</th>
-      <th>breadth</th>
-      <th>required</th>
-      <th>elective</th>
-      <th>elective_group</th>
-      <th>required_group</th>
+      <th hidden=true>track</th>
+      <th hidden=true>breadth</th>
+      <th hidden=true>required</th>
+      <th hidden=true>elective</th>
+      <th hidden=true>elective_group</th>
+      <th hidden=true>required_group</th>
     </tr>
     </thead>
     <tbody>
@@ -61,22 +61,22 @@
         <td>
           <%= course.description %>
         </td>
-        <td>
+        <td hidden=true>
           <%= course.track %>
         </td>
-        <td>
+        <td hidden=true>
           <%= course.breadth %>
         </td>
-        <td>
+        <td hidden=true>
           <%= course.required %>
         </td>
-        <td>
+        <td hidden=true>
           <%= course.elective %>
         </td>
-        <td>
+        <td hidden=true>
           <%= course.elective_group %>
         </td>
-        <td>
+        <td hidden=true>
           <%= course.required_group %>
         </td>
       </tr>
