@@ -10,24 +10,32 @@ Feature: search for courses by track requirements
       | 12406 | INTRODUCTION TO DATABASES | COMS W4111 | 3   | some intro for DB  | Software System  |
       | 12547 | PROGRAMMING LANG & TRANSL | COMS W4115 | 3   | some intro for PLT | Software System  |
       | 12539 | OPERATING SYSTEMS I       | COMS W4118 | 3   | some intro for OS  | Software System  |
+      | 12503 | ARTIFICIAL INTELLIGENCE   | COMS W4701 | 3   | some intro for AI  | Software System  |
   Scenario: show all courses
     Given I am on the home page
-    Then I should see all the courses
+    Then I should see 5 seed courses
 
   Scenario: find courses in Software System Track
     Given I am on the home page
-    And  I press "Software System"
-    Then I should see "INTRODUCTION TO DATABASES"
+    And  I follow "Software System"
+    Then I should be on the main page
+    And I should see "INTRODUCTION TO DATABASES"
     And  I should see "PROGRAMMING LANG & TRANSL"
 
 
   Scenario: find courses that fulfill the breadth requirement
-    When I check the following tags: B1
-    Then I should see "INTRODUCTION TO DATABASES"
+    Given I am on the main page
+    And  I follow "Software System"
+    And  I check Track Electives, Breadth - AI & Applications
+    And I uncheck Track Electives
+    Then I should see "MACHINE LEARNING"
+    And I should not see "INTRODUCTION TO DATABASES"
     And I should not see "OPERATING SYSTEMS I"
+    And  I should not see "PROGRAMMING LANG & TRANSL"
 
-  Scenario: show all courses
-    When I press "Refresh"
-    Then I should see all the courses
+  Scenario: go back to the home page
+    When I follow "Back to home"
+    Then I should be on the home page
+    And I should see all the courses
 
 
