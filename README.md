@@ -1,7 +1,7 @@
 # README
 Step-by-step instructions
 
-git clone https://github.com/jc5230/WikiCourse /n
+git clone https://github.com/jc5230/WikiCourse
 cd WikiCourse
 bundle install
 rake db:migrate
