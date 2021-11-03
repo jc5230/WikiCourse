@@ -1,4 +1,3 @@
-
 module NavigationHelpers
   def path_to(page_name)
 
@@ -18,11 +17,12 @@ module NavigationHelpers
                         :breadth3=>'B3',
                         :elective=>0)
 
-      when /^(.*) track$/
-        courses_main_path(:track => $1)
+    when /^(.*) track$/
+      courses_main_path(:track => $1)
     end
 
   end
 end
 
+World(NavigationHelpers)
 
