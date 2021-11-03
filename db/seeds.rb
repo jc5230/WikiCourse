@@ -70,25 +70,5 @@ courses = [
     ]
 
 courses.each do |course|
-  Course.create!(course)
+    Course.create!(course)
 end
-
-
-# requirements = [
-#     {   :number => "COMS W4111", 
-#         :title => 'INTRODUCTION TO DATABASES', 
-        
-#     },
-#     {   :number => "COMS W4111", 
-#         :title => 'INTRODUCTION TO DATABASES', 
-        
-#     },
-#     {   :number => "COMS W4115", 
-#         :title => 'PROGRAMMING LANG & TRANSL', 
-        
-#     },
-#   	]
-
-# requirements.each do |requirement|
-#   Requirement.create!(requirement)
-# end

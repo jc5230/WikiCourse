@@ -15,19 +15,22 @@ Feature: search for courses by track requirements
     Given I am on the home page
     Then I should see 5 seed courses
 
-  Scenario: find courses in Software System Track
+  Scenario: choose a track and redirect to main page
     Given I am on the home page
     And  I follow "Software System"
     Then I should be on the main page
-    And I should see "INTRODUCTION TO DATABASES"
-    And  I should see "PROGRAMMING LANG & TRANSL"
+
+  Scenario: find courses in Software System Track
+    Given I am on the main page
+    And  I follow "Machine Learning"
+    Then I should see "INTRODUCTION TO DATABASES"
+    And  I should not see "PROGRAMMING LANG & TRANSL"
 
 
   Scenario: find courses that fulfill the breadth requirement
-    Given I am on the main page
-    And  I follow "Software System"
-    And  I follow "Breadth - AI & Applications"
-    #Then I should see "ARTIFICIAL INTELLIGENCE"
+    Given I am on the 'Software System' track
+    When  I check "Breadth - AI & Applications"
+    Then I should see "ARTIFICIAL INTELLIGENCE"
     And I should not see "INTRODUCTION TO DATABASES"
     And I should not see "OPERATING SYSTEMS I"
     And  I should not see "PROGRAMMING LANG & TRANSL"

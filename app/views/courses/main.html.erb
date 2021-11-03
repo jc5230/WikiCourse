@@ -29,29 +29,29 @@
     <div class="select-box">
       <%= link_to "Required Track Courses",
                   courses_main_path({track:params[:track],
-                                     required:params[:required] == "1"? nil : "1",
+                                     required:params[:required] == '1'? nil : '1',
                                      elective:params[:elective],
                                      breadth1: params[:breadth1],
                                      breadth2: params[:breadth2],
                                      breadth3: params[:breadth3]}),
-                  class: ('bg-secondary text-white' if params[:required] == "1")%>
+                  class: ('bg-secondary text-white' if params[:required] == '1')%>
     </div>
     <div class="select-box">
       <%= link_to "Track Electives",
                   courses_main_path(track:params[:track],
                                     required:params[:required],
-                                    elective:params[:elective] == "1"? nil : "1",
+                                    elective:params[:elective] == '1'? nil : '1',
                                     breadth1: params[:breadth1],
                                     breadth2: params[:breadth2],
                                     breadth3: params[:breadth3]),
-                  class: ('bg-secondary text-white' if params[:elective] == "1")%>
+                  class: ('bg-secondary text-white' if params[:elective] == '1')%>
     </div>
     <div class="select-box">
       <div class="select-box">
         <%= link_to "Breadth - Systems",
                     courses_main_path(track:params[:track],
                                       required:params[:required],
-                                      breadth1:params[:breadth1] == 'B1'? '0' : 'B1',
+                                      breadth1:params[:breadth1] == 'B1'? nil : 'B1',
                                       breadth2: params[:breadth2],
                                       breadth3:params[:breadth3],
                                       elective:params[:elective]),
@@ -62,7 +62,7 @@
                   courses_main_path(track:params[:track],
                                     required:params[:required],
                                     breadth1:params[:breadth1],
-                                    breadth2: params[:breadth2] == 'B2'? '0':'B2',
+                                    breadth2: params[:breadth2] == 'B2'? nil:'B2',
                                     breadth3:params[:breadth3],
                                     elective:params[:elective]),
                   :class=>('bg-secondary text-white' if params[:breadth2] == 'B2')%>
@@ -73,7 +73,7 @@
                                     required:params[:required],
                                     breadth1:params[:breadth1],
                                     breadth2: params[:breadth2],
-                                    breadth3:params[:breadth3] == 'B3'? '0':'B3',
+                                    breadth3:params[:breadth3] == 'B3'? nil:'B3',
                                     elective:params[:elective]),
                   class:('bg-secondary text-white' if params[:breadth3] == 'B3')%>
     </div>
@@ -134,6 +134,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 </div>
 </body>
 </html>
