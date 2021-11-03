@@ -15,16 +15,17 @@
   <ul id="track-menu">
     <%  Track.all_tracks.each do |track| %>
       <li class="track-label">
-        <%= link_to track, courses_main_path(track:track), :style => 'text-decoration:none'%>
+        <%= link_to track, courses_main_path(track:track), class: ('bg-warning hilite' if params[:track] == track)%>
           </li>
     <% end %>
   </ul>
-
+  <div id="back"><a href="home">Back to home</a></div>
   <div id="logo">
     WikiCourse
   </div>
 </div>
 <div class="main">
+
 <ul class="ks-cboxtags">
   <li>
     <input type="checkbox" id="checkboxOne" value="Order one">
@@ -35,13 +36,14 @@
   <li>
     <input type="checkbox" id="checkboxTwo" value="Order Two">
     <label for="checkboxTwo">
-      <%= link_to "Track Electives", courses_main_path({track:params[:track], elective:1}), :style => 'text-decoration:none'%>
+      <%= link_to "Track Electives", courses_main_path({track:params[:track], elective:params[:elective]}), :style => 'text-decoration:none'%>
     </label>
   </li>
   <li>
     <input type="checkbox" id="checkboxThree" value="Order Three">
     <label for="checkboxThree">
-      <%= link_to "Breadth - Systems", courses_main_path({track:params[:track], breadth1:'B1'}), :style => 'text-decoration:none'%>
+
+      <%= link_to "Breadth - Systems", courses_main_path({track:params[:track], breadth1:params[:breadth1]}), :style => 'text-decoration:none'%>
     </label>
   </li>
   <li>
