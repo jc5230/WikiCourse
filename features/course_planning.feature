@@ -17,19 +17,19 @@ Feature: search for courses by track requirements
 
   Scenario: choose a track and redirect to main page
     Given I am on the home page
-    And  I follow "Software System"
+    And  I choose Software System track
     Then I should be on the main page
 
   Scenario: find courses in Software System Track
     Given I am on the main page
-    And  I follow "Machine Learning"
+    And  I choose Machine Learning track
     Then I should see "INTRODUCTION TO DATABASES"
     And  I should not see "PROGRAMMING LANG & TRANSL"
 
 
   Scenario: find courses that fulfill the breadth requirement
-    Given I am on the 'Software System' track
-    When  I check "Breadth - AI & Applications"
+    Given I choose Software System track
+    And  I check "Breadth - AI & Applications"
     Then I should see "ARTIFICIAL INTELLIGENCE"
     And I should not see "INTRODUCTION TO DATABASES"
     And I should not see "OPERATING SYSTEMS I"
@@ -37,7 +37,7 @@ Feature: search for courses by track requirements
 
   Scenario: go back to the home page
     Given I am on the main page
-    And  I follow "Software System"
+    And  I choose Software System track
     And I follow "Back to home"
     Then I should be on the home page
     And I should see all the courses
