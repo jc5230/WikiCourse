@@ -40,5 +40,3 @@ Feature: search for courses by track requirements
     And I follow "Back to home"
     Then I should be on the home page
     And I should see all the courses
-
-

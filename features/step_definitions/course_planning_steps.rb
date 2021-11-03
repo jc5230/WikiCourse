@@ -50,3 +50,4 @@ Then(/^I should see (\d+) seed courses$/) do |seeds|
   expect(Course.count).to eq seeds.to_i
 end
 
+

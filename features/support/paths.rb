@@ -1,3 +1,4 @@
+
 module NavigationHelpers
   def path_to(page_name)
 
@@ -25,4 +26,3 @@ module NavigationHelpers
 end
 
 
-World(NavigationHelpers)
