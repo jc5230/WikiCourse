@@ -19,9 +19,9 @@ When /I (un)?check (.*)/ do |uncheck, tag_list|
   tag_list.split(',').each do |tag|
     tag = "#{tag.strip}"
     if uncheck
-      uncheck tag
+      uncheck(tag)
     else
-      check tag
+      check(tag)
     end
   end
 end

@@ -26,16 +26,15 @@ Feature: search for courses by track requirements
   Scenario: find courses that fulfill the breadth requirement
     Given I am on the main page
     And  I follow "Software System"
-    And  I check Track Elective, Breadth - AI
-    And I uncheck Track Elective
-    Then I should not see "INTRODUCTION TO DATABASES"
+    And  I check Track Electives, Breadth - AI & Applications
+    And I uncheck Track Electives
+    Then I should see "MACHINE LEARNING"
+    And I should not see "INTRODUCTION TO DATABASES"
     And I should not see "OPERATING SYSTEMS I"
     And  I should not see "PROGRAMMING LANG & TRANSL"
-    And  I should see "MACHINE LEARNING"
-
 
   Scenario: go back to the home page
-    When I follow "Back to Home"
+    When I follow "Back to home"
     Then I should be on the home page
     And I should see all the courses
 
