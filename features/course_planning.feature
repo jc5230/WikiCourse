@@ -29,7 +29,7 @@ Feature: search for courses by track requirements
 
   Scenario: find courses that fulfill the breadth requirement
     Given I am on the 'Software System' track
-    When  I check "Breadth - AI & Applications"
+    When  I check "Breadth - AI & Applications" in the 'Software System' track
     Then I should see "ARTIFICIAL INTELLIGENCE"
     And I should not see "INTRODUCTION TO DATABASES"
     And I should not see "OPERATING SYSTEMS I"

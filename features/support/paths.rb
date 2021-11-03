@@ -8,7 +8,18 @@ module NavigationHelpers
       courses_main_path
 
     when /^the (.*) track$/
-      courses_main_path(page_name.match(/^the '(.*)' track$/)[1])
+      courses_main_path(:track=>$1)
+    end
+  end
+  def select_tag_in_track(tag, track)
+    case tag
+    when 'Breadth - AI & Applications'
+      courses_main_path(:track=>track,
+                        :required=>nil,
+                        :breadth1=>nil,
+                        :breadth2=>nil,
+                        :breadth3=>'B3',
+                        :elective=>nil)
     end
   end
 end

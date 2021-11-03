@@ -12,8 +12,8 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
 
-When /^(?:|I )check "([^"]*)"$/ do |tag|
-  click_link(tag)
+When /^(?:|I )check "([^"]*)" in the '(.+)' track$/ do |tag, track|
+  visit select_tag_in_track(tag, track)
 end
 
 Then /I should see all the courses/ do
