@@ -16,7 +16,9 @@
   </div>
   <ul id="track-menu">
     <%  Track.all_tracks.each do |track| %>
-      <li class="track-label"> <%= link_to track, courses_main_path(track:track) %></li>
+      <li class="track-label">
+        <%= link_to track, courses_main_path(track:track) %>
+      </li>
     <% end %>
   </ul>
   <div id="logo">
@@ -25,30 +27,8 @@
 </div>
 <h2> All Courses </h2>
 <div class="main">
-<ul class="ks-cboxtags">
-  <li>
-    <input type="checkbox" id="checkboxOne" value="Order one">
-    <label for="checkboxOne">Required Track Courses</label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxTwo" value="Order Two">
-    <label for="checkboxTwo">Track Electives</label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxThree" value="Order Three">
-    <label for="checkboxThree">Breadth - Systems</label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxFour" value="Order Four">
-    <label for="checkboxFour">Breadth - Theory</label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxFive" value="Order Five">
-    <label for="checkboxFive">Breadth - AI & Applications</label>
-  </li>
-</ul>
-<table class="table table-striped col-md-12" id="course">
-  <thead>
+  <table class="table table-striped col-md-12" id="course">
+    <thead>
     <tr>
       <th>call</th>
       <th>title</th>
@@ -62,8 +42,8 @@
       <th>elective_group</th>
       <th>required_group</th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <% @courses.each do |course| %>
       <tr>
         <td>
@@ -101,8 +81,8 @@
         </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 </div>
 </body>
 </html>

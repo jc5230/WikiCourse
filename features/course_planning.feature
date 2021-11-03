@@ -11,11 +11,11 @@ Feature: search for courses by track requirements
       | 12547 | PROGRAMMING LANG & TRANSL | COMS W4115 | 3   | some intro for PLT | Software System  |
       | 12539 | OPERATING SYSTEMS I       | COMS W4118 | 3   | some intro for OS  | Software System  |
   Scenario: show all courses
-    Given I am on the main page
+    Given I am on the home page
     Then I should see all the courses
 
   Scenario: find courses in Software System Track
-    Given I am on the main page
+    Given I am on the home page
     And  I press "Software System"
     Then I should see "INTRODUCTION TO DATABASES"
     And  I should see "PROGRAMMING LANG & TRANSL"
