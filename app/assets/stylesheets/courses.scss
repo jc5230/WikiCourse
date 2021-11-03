@@ -16,13 +16,18 @@
   padding: 0;
 }
 ul#track-menu {
-  margin: 0;
+  margin:0px;
   padding: 0;
   list-style-type: none;
   overflow: auto;
 }
+#back {
+  position: fixed;
+  font-size:20px;
+  bottom: 100px;
+  left: 20px;
+}
 #logo {
-
   font-family: Georgia, serif;
   font-size: 40px;
   color: #274C77;
@@ -31,9 +36,10 @@ ul#track-menu {
   left: 20px;
 }
 .track-label {
-  height:35px;
+  height:50px;
   color:black;
   padding: 8px 16px;
+  margin:0;
   background-color:#E7ECEF;
 }
 .track-label:hover {

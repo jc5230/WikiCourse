@@ -30,7 +30,7 @@ class CoursesController < ApplicationController
     
 
     if params[:required]
-      @required = params[:required].to_i
+      @required = params[:required]
     else
       @required = [1, 0]
     end
