@@ -35,18 +35,45 @@ ul#track-menu {
   bottom: 10px;
   left: 20px;
 }
-.track-label {
+.track-label a{
+  display: block;
   height:50px;
   color:black;
   padding: 8px 16px;
   margin:0;
   background-color:#E7ECEF;
+  text-decoration: none;
 }
-.track-label:hover {
+.track-label a:hover {
   color:white;
   background-color:#6096BA;
+  text-decoration: none;
 }
 .main {
   position:fixed;
   left:20%;
+}
+.select-box {
+  list-style: none;
+  padding: 10px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(139, 139, 139, 0.3);
+  color: #8B8C89;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+.select-box:hover {
+  list-style: none;
+  padding: 10px;
+  display: inline-block;
+  background-color: #6096BA;
+  border: 1px solid rgba(139, 139, 139, 0.3);
+  color: white;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+.select-go-midblue {
+  color:white;
+  background-color: #274C77;
 }
