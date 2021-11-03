@@ -15,17 +15,6 @@ Then /I should see all the courses/ do
   end
 end
 
-When /I (un)?check (.*)/ do |uncheck, tag_list|
-  tag_list.split(',').each do |tag|
-    tag = "#{tag.strip}"
-    if uncheck
-      uncheck(tag)
-    else
-      check(tag)
-    end
-  end
-end
-
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should have_content(text)
