@@ -54,6 +54,10 @@ ul#track-menu {
   left:20%;
 }
 .select-box {
+  display: inline-block;
+  margin:10px;
+}
+.select-box a{
   list-style: none;
   padding: 10px;
   display: inline-block;
@@ -62,8 +66,9 @@ ul#track-menu {
   color: #8B8C89;
   border-radius: 25px;
   white-space: nowrap;
+  text-decoration: none;
 }
-.select-box:hover {
+.select-box a:hover {
   list-style: none;
   padding: 10px;
   display: inline-block;
@@ -72,8 +77,4 @@ ul#track-menu {
   color: white;
   border-radius: 25px;
   white-space: nowrap;
-}
-.select-go-midblue {
-  color:white;
-  background-color: #274C77;
 }
