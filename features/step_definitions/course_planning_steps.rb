@@ -8,18 +8,16 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When(/^I press "([^"]*)"$/) do |button|
-  click_button(button)
+Then /I should see all the courses/ do
+  # Make sure that all the movies in the app are visible in the table
+  Course.all.each do |course|
+    step %{I should see "#{course.title}"}
+  end
 end
 
-Then(/^I should see all the courses$/) do
-  expect(page.body.to_s.split("<tr>
-<td>").count - 1).to eq Course.count
-end
-
-When /I (un)?check the following tags: (.*)/ do |uncheck, tag_list|
+When /I (un)?check (.*)/ do |uncheck, tag_list|
   tag_list.split(',').each do |tag|
-    tag = "tags_#{tag.strip}"
+    tag = "#{tag.strip}"
     if uncheck
       uncheck tag
     else
@@ -44,3 +42,14 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   end
 end
 
+Then(/^I should be on (.+)$/) do |page_name|
+  visit path_to(page_name)
+end
+
+When /^(?:|I )follow "([^"]*)"$/ do |link|
+    click_link(link)
+end
+
+Then(/^I should see (\d+) seed courses$/) do |seeds|
+  expect(Course.count).to eq seeds.to_i
+end

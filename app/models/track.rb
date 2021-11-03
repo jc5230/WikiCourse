@@ -1,6 +1,4 @@
 class Track< ActiveRecord::Base
-  belongs_to :courses
-
   def self.all_tracks
     %w(Machine\ Learning
        Software\ System 
@@ -11,8 +9,5 @@ class Track< ActiveRecord::Base
        Network\ Systems 
        Vision,\ Graphics,\ Interaction,\ and\ Robotics
        MS\ Thesis)
-  end
-
-  def self.breadth
   end
 end
