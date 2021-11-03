@@ -20,10 +20,6 @@ When /^(?:|I )check "([^"]*)"$/ do |tags|
   visit path_to(tags)
 end
 
-When /^(?:|I )select "([^"]*)"/ do |page_name|
-  visit path_to(page_name)
-end
-
 Then /I should see all the courses/ do
   Course.all.each do |course|
     step %{I should see "#{course.title}"}
