@@ -47,8 +47,8 @@
           null,
           null,
           1,
-          3,
-          3,
+          1,
+          1,
           null,
           0,
           null,
@@ -96,13 +96,15 @@
           null,
           7,
           null,
-          null,
-          null,
-          null,
           7,
-          6,
+          7,
           null,
-          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
           null,
           null,
           null,
@@ -145,6 +147,7 @@
       "/Users/beisu/Desktop/SAAS/WikiCourse/app/helpers/courses_helper.rb": {
         "lines": [
           1,
+          null,
           null
         ]
       },
@@ -166,7 +169,7 @@
         ]
       }
     },
-    "timestamp": 1635918550
+    "timestamp": 1635920970
   },
   "RSpec": {
     "coverage": {
