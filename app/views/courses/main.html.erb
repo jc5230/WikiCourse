@@ -15,50 +15,69 @@
   <ul id="track-menu">
     <%  Track.all_tracks.each do |track| %>
       <li class="track-label">
-        <%= link_to track, courses_main_path(track:track), class: ('bg-warning hilite' if params[:track] == track)%>
+        <%= link_to track, courses_main_path(track:track), class: ('bg-warning' if params[:track] == track)%>
           </li>
     <% end %>
   </ul>
-  <%= link_to "Back to home", courses_home_path %>
+  <div id="back"><a href="home">Back to home</a></div>
   <div id="logo">
     WikiCourse
   </div>
 </div>
 <div class="main">
-
-<ul class="ks-cboxtags">
-  <li>
-    <input type="checkbox" id="checkboxOne" value="Order one">
-    <label for="checkboxOne">
-      <%= link_to "Required Track Courses", courses_main_path({track:params[:track], required:1}), :style => 'text-decoration:none'%>
-    </label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxTwo" value="Order Two">
-    <label for="checkboxTwo">
-      <%= link_to "Track Electives", courses_main_path({track:params[:track], elective:params[:elective]}), :style => 'text-decoration:none'%>
-    </label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxThree" value="Order Three">
-    <label for="checkboxThree">
-
-      <%= link_to "Breadth - Systems", courses_main_path({track:params[:track], breadth1:params[:breadth1]}), :style => 'text-decoration:none'%>
-    </label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxFour" value="Order Four">
-    <label for="checkboxFour">
-      <%= link_to "Breadth - Theory", courses_main_path({track:params[:track], breadth1:'B2'}), :style => 'text-decoration:none'%>
-    </label>
-  </li>
-  <li>
-    <input type="checkbox" id="checkboxFive" value="Order Five">
-    <label for="checkboxFive">
-      <%= link_to "Breadth - AI & Applications", courses_main_path({track:params[:track], breadth1:'B3'}), :style => 'text-decoration:none'%>
-    </label>
-  </li>
-</ul>
+  <div class="select">
+    <div class="select-box">
+      <%= link_to "Required Track Courses",
+                  courses_main_path({track:params[:track],
+                                     required:params[:required] == "1"? nil : "1",
+                                     elective:params[:elective],
+                                     breadth1: params[:breadth1],
+                                     breadth2: params[:breadth2],
+                                     breadth3: params[:breadth3]}),
+                  class: ('bg-secondary text-white' if params[:required] == "1")%>
+    </div>
+    <div class="select-box">
+      <%= link_to "Track Electives",
+                  courses_main_path(track:params[:track],
+                                    required:params[:required],
+                                    elective:params[:elective] == "1"? nil : "1",
+                                    breadth1: params[:breadth1],
+                                    breadth2: params[:breadth2],
+                                    breadth3: params[:breadth3]),
+                  class: ('bg-secondary text-white' if params[:elective] == "1")%>
+    </div>
+    <div class="select-box">
+      <div class="select-box">
+        <%= link_to "Breadth - Systems",
+                    courses_main_path(track:params[:track],
+                                      required:params[:required],
+                                      breadth1:params[:breadth1] == 'B1'? '0' : 'B1',
+                                      breadth2: params[:breadth2],
+                                      breadth3:params[:breadth3],
+                                      elective:params[:elective]),
+                    class:('bg-secondary text-white' if params[:breadth1] == 'B1')%>
+    </div>
+    <div class="select-box">
+      <%= link_to "Breadth - Theory",
+                  courses_main_path(track:params[:track],
+                                    required:params[:required],
+                                    breadth1:params[:breadth1],
+                                    breadth2: params[:breadth2] == 'B2'? '0':'B2',
+                                    breadth3:params[:breadth3],
+                                    elective:params[:elective]),
+                  :class=>('bg-secondary text-white' if params[:breadth2] == 'B2')%>
+    </div>
+    <div class="select-box">
+      <%= link_to "Breadth - AI & Applications",
+                  courses_main_path(track:params[:track],
+                                    required:params[:required],
+                                    breadth1:params[:breadth1],
+                                    breadth2: params[:breadth2],
+                                    breadth3:params[:breadth3] == 'B3'? '0':'B3',
+                                    elective:params[:elective]),
+                  class:('bg-secondary text-white' if params[:breadth3] == 'B3')%>
+    </div>
+  </div>
 <table class="table table-striped col-md-12" id="course">
   <thead>
     <tr>
