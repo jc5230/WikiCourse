@@ -1,11 +1,5 @@
 class CoursesController < ApplicationController
 
-
-
-  def detail
-
-  end
-
   def show
     id = params[:id] # retrieve movie ID from URI route
     @course = Course.find(id) # look up movie by unique ID
@@ -14,9 +8,7 @@ class CoursesController < ApplicationController
 
   def main
     @all_tracks = Track.all_tracks
-    
-
-    if params[:track]
+    if
       @track = params[:track]
     else
       @track = "Software System"
@@ -39,10 +31,10 @@ class CoursesController < ApplicationController
     end
 
     @breadth = [@breadth1, @breadth2, @breadth3]
-    
+
 
     if params[:required]
-      @required = params[:required].to_i
+      @required = params[:required]
     else
       @required = [1, 0]
     end
@@ -55,14 +47,13 @@ class CoursesController < ApplicationController
     
     # @courses = Course.where(track: @track, breadth: @breadth) 
     if !params[:breadth1] & !params[:breadth1] & !params[:breadth1] &  !params[:required] & !params[:elective]
-      @courses = Course.all
+      @courses = Course.where(track: @track)
     else
       @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective)
     end
+
+
   end
-
-
-
 
   private
 
