@@ -44,7 +44,6 @@ class CoursesController < ApplicationController
     # @courses = Course.where(track: @track, breadth: @breadth) 
     if !params[:breadth1] & !params[:breadth1] & !params[:breadth1] &  !params[:required] & !params[:elective]
       @courses = Course.where(track: @track)
-      @courses =
     else
       @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective)
     end
