@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-03T02:29:30-04:00">2021-11-03T02:29:30-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-03T10:43:51-04:00">2021-11-03T10:43:51-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="yellow">
-  89.09%
+      <span class="green">
+  94.34%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.35
+         3.62
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>55</b> relevant lines,
-    <span class="green"><b>49</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed. </span>
-    (<span class="yellow">
-  89.09%
+    <b>53</b> relevant lines,
+    <span class="green"><b>50</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed. </span>
+    (<span class="green">
+  94.34%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#277c60745d5b86d5ccd010a4b47c0da984ddd344" class="src_link" title="app/controllers/courses_controller.rb">app/controllers/courses_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
-            <td class="cell--number">55</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">3.95</td>
+            <td class="green strong cell--number t-file__coverage">94.44 %</td>
+            <td class="cell--number">54</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">4.72</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">22</td>
             <td class="cell--number">20</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">3.00</td>
+            <td class="cell--number">3.09</td>
             
           </tr>
         
@@ -232,8 +232,8 @@
   <div class="header">
     <h3>app/controllers/courses_controller.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="green">
+  94.44%
 </span>
 
       lines covered
@@ -242,9 +242,9 @@
     
 
     <div class="t-line-summary">
-      <b>20</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>18</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -486,41 +486,30 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">    # if !params[:breadth1] &amp; !params[:breadth2] &amp; !params[:breadth3] &amp; !params[:required] &amp; !params[:elective] &amp; @breadth != [&#39;0&#39;,&#39;0&#39;,&#39;0&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">    # @courses = Course.where(track: @track)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="7" data-linenumber="24">
             <span class="hits">7</span>
-            
-
-            
-
-            <code class="ruby">    if !params[:breadth1] &amp; !params[:breadth2] &amp; !params[:breadth3] &amp; !params[:required] &amp; !params[:elective] &amp; @breadth != [&#39;0&#39;,&#39;0&#39;,&#39;0&#39;]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="7" data-linenumber="23">
-            <span class="hits">7</span>
-            
-
-            
-
-            <code class="ruby">        @courses = Course.where(track: @track).uniq</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
             
 
             
@@ -530,8 +519,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="26">
-            
+          <li class="covered" data-hits="6" data-linenumber="25">
+            <span class="hits">6</span>
             
 
             
@@ -541,7 +530,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -552,13 +541,24 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="28">
+          <li class="covered" data-hits="7" data-linenumber="27">
+            <span class="hits">7</span>
+            
+
+            
+
+            <code class="ruby">      @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
             
 
-            <code class="ruby">      @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective).uniq</code>
+            <code class="ruby">    # end</code>
           </li>
         </div>
       
@@ -569,7 +569,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -580,7 +580,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -607,18 +607,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
+          <li class="covered" data-hits="1" data-linenumber="33">
             <span class="hits">1</span>
             
 
@@ -629,7 +618,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -640,7 +629,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="35">
             <span class="hits">1</span>
             
 
@@ -651,7 +640,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="37">
+          <li class="missed" data-hits="0" data-linenumber="36">
             
             
 
@@ -662,7 +651,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="37">
             
             
 
@@ -673,7 +662,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -684,7 +673,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -695,7 +684,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
@@ -706,7 +695,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -717,7 +706,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -728,7 +717,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -739,7 +728,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -750,7 +739,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
@@ -761,7 +750,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -772,7 +761,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -783,7 +772,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -794,7 +783,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -805,7 +794,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -816,7 +805,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -827,7 +816,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -838,7 +827,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -849,7 +838,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -1433,8 +1422,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="19">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="19">
+            <span class="hits">6</span>
             
 
             
@@ -1444,8 +1433,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="20">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="20">
+            <span class="hits">6</span>
             
 
             
@@ -1521,8 +1510,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="27">
+            <span class="hits">3</span>
             
 
             
@@ -1532,8 +1521,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="28">
+            <span class="hits">3</span>
             
 
             

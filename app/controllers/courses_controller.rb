@@ -19,14 +19,13 @@ class CoursesController < ApplicationController
 
     @elective = params[:elective] ? params[:elective].to_i : [1, 0]
 
-    if !params[:breadth1] & !params[:breadth2] & !params[:breadth3] & !params[:required] & !params[:elective] & @breadth != ['0','0','0']
-        @courses = Course.where(track: @track).uniq
-    else
+    # if !params[:breadth1] & !params[:breadth2] & !params[:breadth3] & !params[:required] & !params[:elective] & @breadth != ['0','0','0']
+    # @courses = Course.where(track: @track)
       if @breadth==['0','0','0']
         @breadth = ['B1','B2','B3','0']
       end
-      @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective).uniq
-    end
+      @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective)
+    # end
   end
 
 
