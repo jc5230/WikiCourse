@@ -54,6 +54,18 @@ courses = [
         :elective => 0,
         :elective_group => '0',
         :required_group => '0',
+    },
+    {   :call => 12547,
+        :number => "COMS W4115",
+        :title => 'PROGRAMMING LANG & TRANSL',
+        :pts => 3,
+        :description => 'some intro for PLT',
+        :track => 'Software System',
+        :breadth => 'B3',
+        :required => 1,
+        :elective => 1,
+        :elective_group => '1',
+        :required_group => '1',
     }
     ]
 

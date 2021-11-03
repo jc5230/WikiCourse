@@ -3,48 +3,58 @@
   <title>WikiCourse</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/tag-style.css">
 </head>
 <body>
 <div id="menu">
   <div id="menu-info">
     Select your track:
   </div>
+
   <ul id="track-menu">
     <%  Track.all_tracks.each do |track| %>
-      <li class="track-label"> <%= link_to track, courses_main_path(track:track) %></li>
+      <li class="track-label">
+        <%= link_to track, courses_main_path(track:track), :style => 'text-decoration:none'%>
+          </li>
     <% end %>
   </ul>
+
   <div id="logo">
     WikiCourse
   </div>
 </div>
-<h2> All Courses </h2>
 <div class="main">
 <ul class="ks-cboxtags">
   <li>
     <input type="checkbox" id="checkboxOne" value="Order one">
-    <label for="checkboxOne">Required Track Courses</label>
+    <label for="checkboxOne">
+      <%= link_to "Required Track Courses", courses_main_path({track:params[:track], required:1}), :style => 'text-decoration:none'%>
+    </label>
   </li>
   <li>
     <input type="checkbox" id="checkboxTwo" value="Order Two">
-    <label for="checkboxTwo">Track Electives</label>
+    <label for="checkboxTwo">
+      <%= link_to "Track Electives", courses_main_path({track:params[:track], elective:1}), :style => 'text-decoration:none'%>
+    </label>
   </li>
   <li>
     <input type="checkbox" id="checkboxThree" value="Order Three">
-    <label for="checkboxThree">Breadth - Systems</label>
+    <label for="checkboxThree">
+      <%= link_to "Breadth - Systems", courses_main_path({track:params[:track], breadth1:'B1'}), :style => 'text-decoration:none'%>
+    </label>
   </li>
   <li>
     <input type="checkbox" id="checkboxFour" value="Order Four">
-    <label for="checkboxFour">Breadth - Theory</label>
+    <label for="checkboxFour">
+      <%= link_to "Breadth - Theory", courses_main_path({track:params[:track], breadth1:'B2'}), :style => 'text-decoration:none'%>
+    </label>
   </li>
   <li>
     <input type="checkbox" id="checkboxFive" value="Order Five">
-    <label for="checkboxFive">Breadth - AI & Applications</label>
+    <label for="checkboxFive">
+      <%= link_to "Breadth - AI & Applications", courses_main_path({track:params[:track], breadth1:'B3'}), :style => 'text-decoration:none'%>
+    </label>
   </li>
 </ul>
 <table class="table table-striped col-md-12" id="course">
