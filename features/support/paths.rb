@@ -11,14 +11,16 @@ module NavigationHelpers
       #
     when /^Breadth - AI & Applications$/
       courses_main_path(:track=>'Software System',
-                        :required=>0,
-                        :breadth1=>0,
-                        :breadth2=> 0,
+                        :required=>nil,
+                        :breadth1=>nil,
+                        :breadth2=> nil,
                         :breadth3=>'B3',
-                        :elective=>0)
+                        :elective=>nil)
 
     when /^(.*) track$/
       courses_main_path(:track => $1)
+
+
     end
 
   end

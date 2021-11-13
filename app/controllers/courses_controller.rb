@@ -15,11 +15,11 @@ class CoursesController < ApplicationController
 
     @breadth3 = params[:breadth3] ? params[:breadth3] : '0'
 
-    @breadth = !params[:breadth1] && !params[:breadth2] && !params[:breadth3] ? ['B1','B2','B3','0'] : [@breadth1, @breadth2, @breadth3]
+    @breadth = !params[:breadth1] && !params[:breadth2] && !params[:breadth3] ? ['B1','B2','B3','0', nil] : [@breadth1, @breadth2, @breadth3]
 
-    @required = params[:required] ? params[:required].to_i : [1, 0]
+    @required = params[:required] ? params[:required].to_i : [1, 0, nil]
 
-    @elective = params[:elective] ? params[:elective].to_i : [1, 0]
+    @elective = params[:elective] ? params[:elective].to_i : [1, 0, nil]
     
 
     if !params[:breadth1] && !params[:breadth2] && !params[:breadth3] && !params[:required] && !params[:elective]

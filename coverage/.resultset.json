@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/beisu/Desktop/SAAS/WikiCourse/features/support/paths.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/features/support/paths.rb": {
         "lines": [
           1,
           1,
@@ -18,17 +18,6 @@
           1,
           null,
           null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -40,11 +29,11 @@
           null,
           null,
           null,
-          null,
-          1
+          1,
+          null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/features/step_definitions/course_planning_steps.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/features/step_definitions/course_planning_steps.rb": {
         "lines": [
           1,
           5,
@@ -75,14 +64,14 @@
           null,
           null,
           1,
-          6,
-          6,
+          7,
+          7,
           null,
           null,
           null,
           1,
-          4,
-          4,
+          3,
+          3,
           null,
           null,
           null,
@@ -97,16 +86,17 @@
           1,
           1,
           null,
+          null,
           null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/course.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/app/models/course.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/courses_controller.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
@@ -146,26 +136,26 @@
           null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/application_controller.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/helpers/application_helper.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/helpers/courses_helper.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/app/helpers/courses_helper.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/track.rb": {
+      "/home/jc5230/WikiCourse/WikiCourse/app/models/track.rb": {
         "lines": [
           1,
           1,
@@ -183,80 +173,6 @@
         ]
       }
     },
-
-  },
-  "RSpec": {
-    "coverage": {
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/courses_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/course.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/beisu/Desktop/SAAS/WikiCourse/app/models/track.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      }
-    },
-    "timestamp": 1635972345
+    "timestamp": 1636835433
   }
 }

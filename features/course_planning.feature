@@ -5,12 +5,12 @@ Feature: search for courses by track requirements
 
   Background: courses in database
     Given the following courses exist:
-      | call  | title                     | number     | pts | description        | track            |
-      | 12406 | INTRODUCTION TO DATABASES | COMS W4111 | 3   | some intro for DB  | Machine Learning |
-      | 12406 | INTRODUCTION TO DATABASES | COMS W4111 | 3   | some intro for DB  | Software System  |
-      | 12547 | PROGRAMMING LANG & TRANSL | COMS W4115 | 3   | some intro for PLT | Software System  |
-      | 12539 | OPERATING SYSTEMS I       | COMS W4118 | 3   | some intro for OS  | Software System  |
-      | 12503 | ARTIFICIAL INTELLIGENCE   | COMS W4701 | 3   | some intro for AI  | Software System  |
+      | call  | title                     | number     | pts | description        | track            | breadth  | required  | elective  |
+      | 12406 | INTRODUCTION TO DATABASES | COMS W4111 | 3   | some intro for DB  | Machine Learning | B1       | 0         | 1         |
+      | 12406 | INTRODUCTION TO DATABASES | COMS W4111 | 3   | some intro for DB  | Software System  | B1       | 1         | 1         |
+      | 12547 | PROGRAMMING LANG & TRANSL | COMS W4115 | 3   | some intro for PLT | Software System  | B1       | 1         | 1         |
+      | 12539 | OPERATING SYSTEMS I       | COMS W4118 | 3   | some intro for OS  | Software System  | B2       | 1         | 0         |
+      | 12503 | ARTIFICIAL INTELLIGENCE   | COMS W4701 | 3   | some intro for AI  | Software System  | B3       | 0         | 0         |
   Scenario: show all courses
     Given I am on the home page
     Then I should see 5 seed courses
@@ -30,7 +30,7 @@ Feature: search for courses by track requirements
   Scenario: find courses that fulfill the breadth requirement
     Given I choose Software System track
     And  I check "Breadth - AI & Applications"
-    Then I should not see "INTRODUCTION TO DATABASES"
+    Then I should see "ARTIFICIAL INTELLIGENCE"
     And I should not see "OPERATING SYSTEMS I"
     And  I should not see "PROGRAMMING LANG & TRANSL"
 
