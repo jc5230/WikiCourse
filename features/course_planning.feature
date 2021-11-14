@@ -27,12 +27,23 @@ Feature: search for courses by track requirements
     And  I should not see "PROGRAMMING LANG & TRANSL"
 
 
-  Scenario: find courses that fulfill the breadth requirement
-    Given I choose Software System track
-    And  I check "Breadth - AI & Applications"
+  Scenario: find courses that fulfill the breadth requirement in a track
+    Given I check Breadth - AI & Applications label in Software System track
     Then I should see "ARTIFICIAL INTELLIGENCE"
     And I should not see "OPERATING SYSTEMS I"
     And  I should not see "PROGRAMMING LANG & TRANSL"
+
+  Scenario: find courses that fulfill multiple requirements in a track
+    Given I check multiple labels: Required Track Courses, Breadth - Systems in Software System track
+    Then I should see "INTRODUCTION TO DATABASES"
+    And  I should see "PROGRAMMING LANG & TRANSL"
+    And I should not see "OPERATING SYSTEMS I"
+
+  Scenario: find courses that fulfill all requirements in a track
+    Given I check multiple labels: Required Track Courses, Track Electives, Breadth - Systems, Breadth - Theory, Breadth - AI & Applications in Software System track
+    Then I should see "INTRODUCTION TO DATABASES"
+    And  I should see "PROGRAMMING LANG & TRANSL"
+    And I should not see "OPERATING SYSTEMS I"
 
   Scenario: go back to the home page
     Given I am on the main page

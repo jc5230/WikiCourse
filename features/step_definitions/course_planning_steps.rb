@@ -8,16 +8,20 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When /^(?:|I )choose ([^"]*)$/ do |track|
-  visit path_to(track)
+When /^(?:|I )choose ([^"]*) track$/ do |track|
+  visit path_to_track(track)
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   visit path_to(link)
 end
 
-When /^(?:|I )check "([^"]*)"$/ do |tags|
-  visit path_to(tags)
+When /^(?:|I )check ([^"]*) label in ([^"]*) track$/ do |label, track|
+  visit path_to_label(label, track)
+end
+
+When /^(?:|I )check multiple labels: ([^"]*) in ([^"]*) track$/ do |labels, track|
+  visit path_to_labels(labels, track)
 end
 
 Then /I should see all the courses/ do
