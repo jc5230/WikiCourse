@@ -35,19 +35,13 @@
       <th>number</th>
       <th>pts</th>
       <th>description</th>
-      <th hidden=true>track</th>
-      <th hidden=true>breadth</th>
-      <th hidden=true>required</th>
-      <th hidden=true>elective</th>
-      <th hidden=true>elective_group</th>
-      <th hidden=true>required_group</th>
     </tr>
     </thead>
     <tbody>
     <% @courses.each do |course| %>
       <tr>
         <td>
-          <%= course.call %>
+          <%= link_to course.call, courses_detail_path(call: course.call) %>
         </td>
         <td>
           <%= course.title %>
@@ -60,24 +54,6 @@
         </td>
         <td>
           <%= course.description %>
-        </td>
-        <td hidden=true>
-          <%= course.track %>
-        </td>
-        <td hidden=true>
-          <%= course.breadth %>
-        </td>
-        <td hidden=true>
-          <%= course.required %>
-        </td>
-        <td hidden=true>
-          <%= course.elective %>
-        </td>
-        <td hidden=true>
-          <%= course.elective_group %>
-        </td>
-        <td hidden=true>
-          <%= course.required_group %>
         </td>
       </tr>
     <% end %>
