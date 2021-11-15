@@ -60,6 +60,11 @@ RSpec.describe CoursesController, type: :controller do
     )
   end  
 
+  after(:each) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean 
+  end
+
   describe "GET home" do
     it "return all courses" do
         get :home
