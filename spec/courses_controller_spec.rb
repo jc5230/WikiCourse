@@ -128,6 +128,22 @@ RSpec.describe CoursesController, type: :controller do
     end
   end
 
+  describe 'go to detail page of course 12406' do
+
+    it "should render detail page template" do
+      get :detail
+      expect(response).to render_template(:detail)
+    end
+
+
+    it "gets the detail for course 12406" do
+      get :detail, :params => { :call => 12406 }
+      expect(assigns[:courses][0].call).to eq(12406)
+      expect(assigns[:courses][0].title).to eq(@course1.title)
+      expect(assigns[:courses][0].number).to eq(@course1.number)
+      expect(assigns[:courses][0].pts).to eq(@course1.pts)
+    end
+  end
 
 
 
