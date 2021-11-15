@@ -30,11 +30,6 @@ class CoursesController < ApplicationController
 
   end
 
-  def detail
-    @call = params[:call] ? params[:call] : 12539
-    @courses = Course.where(call: @call).limit(1)
-  end
-
 
 end
 

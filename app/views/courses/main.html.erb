@@ -98,7 +98,7 @@
     <% @courses.each do |course| %>
       <tr>
         <td>
-          <%= link_to course.call, courses_detail_path(call: course.call) %>
+          <%= course.call %>
         </td>
         <td>
           <%= course.title %>

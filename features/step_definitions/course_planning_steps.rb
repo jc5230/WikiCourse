@@ -12,9 +12,6 @@ When /^(?:|I )choose ([^"]*) track$/ do |track|
   visit path_to_track(track)
 end
 
-And /^I click on the call number (\d+)$/ do |call|
-  visit path_to_detail_page(call)
-end
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   visit path_to(link)
 end
