@@ -46,12 +46,12 @@ Feature: search for courses by track requirements
 
   Scenario: checkout the detail page of a course
     Given I check Breadth - AI & Applications label in Software System track
-    And I select "INTRODUCTION TO DATABASES"
-    Then  I should be on the detail page of "INTRODUCTION TO DATABASES"
-    And I should see the course description of "INTRODUCTION TO DATABASES"
+    And I click on the call number 12406
+    Then  I should be on the detail page for "INTRODUCTION TO DATABASES"
+    And I should see "some intro for DB"
 
   Scenario: go back to the home page after see the course descriptions
-    Given I am on the detail page of "INTRODUCTION TO DATABASES"
+    Given I am on the detail page for "INTRODUCTION TO DATABASES"
     And I follow "Back to home"
     Then I should be on the home page
     And I should see all the courses
