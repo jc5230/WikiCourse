@@ -72,3 +72,37 @@ courses = [
 courses.each do |course|
     Course.create!(course)
 end
+
+
+
+comments = [
+    {   :call => 12406, 
+        :rating => 5, 
+        :workload => 1, 
+        :description => 'this course is so coooooooooooooooool',
+        :professor => "Mr. Professor", 
+        :upvote => 5, 
+        :downvote => 0,  
+    },
+    {   :call => 12406, 
+        :rating => 3, 
+        :workload => 5, 
+        :description => 'this course is so difficult',
+        :professor => "Mr. Professor", 
+        :upvote => 5, 
+        :downvote => 0,  
+    },
+    {   :call => 12547, 
+        :rating => 3, 
+        :workload => 3, 
+        :description => 'this course is fun',
+        :professor => "Mr. Professor Fun", 
+        :upvote => 5, 
+        :downvote => 5,  
+    }
+]
+
+
+comments.each do |comment|
+    Comment.create!(comment)
+end

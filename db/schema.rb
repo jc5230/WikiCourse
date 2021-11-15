@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_02_201322) do
+ActiveRecord::Schema.define(version: 2021_11_15_224748) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "call"
+    t.integer "rating"
+    t.integer "workload"
+    t.text "description"
+    t.string "professor"
+    t.integer "upvote"
+    t.integer "downvote"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.integer "call"
