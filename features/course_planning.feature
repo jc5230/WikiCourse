@@ -26,7 +26,6 @@ Feature: search for courses by track requirements
     Then I should see "INTRODUCTION TO DATABASES"
     And  I should not see "PROGRAMMING LANG & TRANSL"
 
-
   Scenario: find courses that fulfill the breadth requirement in a track
     Given I check Breadth - AI & Applications label in Software System track
     Then I should see "ARTIFICIAL INTELLIGENCE"
@@ -44,6 +43,18 @@ Feature: search for courses by track requirements
     Then I should see "INTRODUCTION TO DATABASES"
     And  I should see "PROGRAMMING LANG & TRANSL"
     And I should not see "OPERATING SYSTEMS I"
+
+  Scenario: checkout the detail page of a course
+    Given I check Breadth - AI & Applications label in Software System track
+    And I click on the call number 12406
+    Then  I should be on the detail page for "INTRODUCTION TO DATABASES"
+    And I should see "some intro for DB"
+
+  Scenario: go back to the home page after see the course descriptions
+    Given I am on the detail page for "INTRODUCTION TO DATABASES"
+    And I follow "Back to home"
+    Then I should be on the home page
+    And I should see all the courses
 
   Scenario: go back to the home page
     Given I am on the main page
