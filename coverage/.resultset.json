@@ -279,8 +279,16 @@
           null,
           null,
           1,
-          2,
-          2,
+          3,
+          3,
+          3,
+          null,
+          3,
+          4,
+          4,
+          4,
+          4,
+          null,
           null,
           null,
           null,
@@ -297,6 +305,19 @@
       },
       "/Users/wws/Desktop/4995/WikiCourse/app/models/course.rb": {
         "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/WikiCourse/app/models/comment.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/WikiCourse/app/models/application_record.rb": {
+        "lines": [
+          1,
           1,
           null
         ]
@@ -319,6 +340,6 @@
         ]
       }
     },
-    "timestamp": 1637013272
+    "timestamp": 1637018442
   }
 }

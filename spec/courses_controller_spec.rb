@@ -58,6 +58,34 @@ RSpec.describe CoursesController, type: :controller do
       :required => 0,
       :elective => 0
     )
+    @comment1 = Comment.create!(
+      :call => 12406, 
+      :rating => 5, 
+      :workload => 1, 
+      :description => 'this course is so coooooooooooooooool',
+      :professor => "Mr. Professor", 
+      :upvote => 5, 
+      :downvote => 0
+    )
+    @comment2 = Comment.create!(
+      :call => 12406, 
+      :rating => 3, 
+      :workload => 5, 
+      :description => 'this course is so difficult',
+      :professor => "Mr. Professor", 
+      :upvote => 5, 
+      :downvote => 0
+    )
+    @comment3 = Comment.create!(
+      :call => 12547, 
+      :rating => 3, 
+      :workload => 3, 
+      :description => 'this course is fun',
+      :professor => "Mr. Professor Fun", 
+      :upvote => 5, 
+      :downvote => 5
+    )
+    
   end  
 
   after(:each) do
@@ -143,6 +171,14 @@ RSpec.describe CoursesController, type: :controller do
       expect(assigns[:courses][0].number).to eq(@course1.number)
       expect(assigns[:courses][0].pts).to eq(@course1.pts)
     end
+
+    it "gets the course comments for course 12406" do
+      get :detail, :params => { :call => 12406 }
+      expect(assigns[:comments]).to include(@comment1)
+      expect(assigns[:comments]).to include(@comment2)
+      expect(assigns[:comments]).not_to include(@comment3)
+    end
+
   end
 
 
