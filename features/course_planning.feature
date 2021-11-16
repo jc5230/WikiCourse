@@ -50,11 +50,17 @@ Feature: search for courses by track requirements
     Then  I should be on the detail page for "INTRODUCTION TO DATABASES"
     And I should see "some intro for DB"
 
+  Scenario: see the comments of a course
+    Given I am on the detail page for "INTRODUCTION TO DATABASES"
+    Then I should see "Student Comments"
+    And I should see "rating workload description professor date"
+
   Scenario: go back to the home page after see the course descriptions
     Given I am on the detail page for "INTRODUCTION TO DATABASES"
     And I follow "Back to home"
     Then I should be on the home page
     And I should see all the courses
+
 
   Scenario: go back to the home page
     Given I am on the main page

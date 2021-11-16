@@ -7,25 +7,68 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="menu">
-  <div id="back"><a href="home">Back to home</a></div>
-  <div id="logo">
-    WikiCourse
+  <div id="menu">
+    <div id="back"><a href="home">Back to home</a></div>
+    <div id="logo">
+      WikiCourse
+    </div>
   </div>
-</div>
-<div class="main-detail">
-  <% @courses.each do |course| %>
-  <div class="detail-title"><h5>Title: </h5></div>
-  <div class="detail-content"><%= course.title %></div>
-  <div class="detail-title"><h5>Call: </h5></div>
-  <div class="detail-content"><%= course.call %></div>
-  <div class="detail-title"><h5>Number: </h5></div>
-  <div class="detail-content"><%= course.number %></div>
-  <div class="detail-title"><h5>Points: </h5></div>
-  <div class="detail-content"><%= course.pts %></div>
-  <div class="detail-title"><h5>Description: </h5></div>
-  <div class="detail-content"><%= course.description %></div>
-    <% end %>
-</div>
+  <div class="main-detail">
+
+    <% @courses.each do |course| %>
+    <div class="detail-title">Title: </div>
+      <div class="detail-content"><h4><%= course.title %></h4></div>
+    <div class="detail-title">Call: </div>
+    <div class="detail-content"><h4><%= course.call %></h4></div>
+    <div class="detail-title">Number: </div>
+    <div class="detail-content"><h4><%= course.number %></h4></div>
+    <div class="detail-title">Points: </div>
+    <div class="detail-content"><h4><%= course.pts %></h4></div>
+    <div class="detail-title">Description: </div>
+    <div class="detail-content"><h4><%= course.description %></h4></div>
+      <% end %>
+
+    <div class="comment-title"><h5>Student Comments: </h5></div>
+    <div class="comment-table">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>rating</th>
+          <th>workload</th>
+          <th>description</th>
+          <th>professor</th>
+          <th>date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @comments.each do |comment| %>
+          <tr>
+            <td>
+              <%= comment.rating %>
+            </td>
+            <td>
+              <%= comment.workload %>
+            </td>
+            <td>
+              <%= comment.description %>
+            </td>
+            <td>
+              <%= comment.professor %>
+            </td>
+            <td>
+              <%= comment.created_at %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+
+
+
+
 </body>
 </html>
