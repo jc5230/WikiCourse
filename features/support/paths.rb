@@ -7,9 +7,16 @@ module NavigationHelpers
 
     when /^the main page$/
       courses_main_path
+
+    when/^the detail page for "(.+)"$/
+      courses_detail_path(:call=>Course.find_by_title($1).call)
+
     end
   end
 
+  def path_to_detail_page(call)
+    courses_detail_path(:call=>call)
+  end
   def path_to_track(track_name)
     courses_main_path(:track => track_name)
   end
