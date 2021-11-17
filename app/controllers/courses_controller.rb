@@ -34,13 +34,6 @@ class CoursesController < ApplicationController
     @call = params[:call] ? params[:call] : 12539
     @courses = Course.where(call: @call).limit(1)
     @comments = Comment.where(call: @call)
-    
-    @comments.all.each do |comment|
-      puts(comment.call)
-      puts(comment.professor)
-      puts(comment.description)
-      puts(comment.created_at)
-    end
   end
 
 

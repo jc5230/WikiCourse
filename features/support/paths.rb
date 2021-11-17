@@ -37,20 +37,7 @@ module NavigationHelpers
                         :breadth2=> nil,
                         :breadth3=>nil,
                         :elective=>'1')
-    when 'Breadth - Systems'
-      courses_main_path(:track=>track,
-                        :required=>nil,
-                        :breadth1=>'B1',
-                        :breadth2=> nil,
-                        :breadth3=>nil,
-                        :elective=>nil)
-    when 'Breadth - Theory'
-      courses_main_path(:track=>track,
-                        :required=>nil,
-                        :breadth1=>nil,
-                        :breadth2=>'B2',
-                        :breadth3=>nil,
-                        :elective=>nil)
+
     when 'Breadth - AI & Applications'
       courses_main_path(:track=>track,
                         :required=>nil,
