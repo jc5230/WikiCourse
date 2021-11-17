@@ -46,10 +46,6 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
 end
 
 Then(/^I should be on (.+)$/) do |page_name|
-  # current_path = URI.parse(current_url).path
-  #if current_path.respond_to? :should
-  # current_path.should == path_to(page_name)
-  #end
   visit path_to(page_name)
 end
 
@@ -57,4 +53,6 @@ Then(/^I should see (\d+) seed courses$/) do |seeds|
   expect(Course.count).to eq seeds.to_i
 end
 
-
+Then(/^(?:|I )uncheck ([^"]*) label in ([^"]*) track$/) do |label, track|
+  visit path_to_track(track)
+end

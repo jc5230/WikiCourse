@@ -31,6 +31,20 @@ Feature: search for courses by track requirements
     Then I should see "ARTIFICIAL INTELLIGENCE"
     And I should not see "OPERATING SYSTEMS I"
     And  I should not see "PROGRAMMING LANG & TRANSL"
+    Then I follow "Back to home"
+    And I check Track Electives label in Software System track
+    And I should see "PROGRAMMING LANG & TRANSL"
+
+  Scenario: unselect a track and reselect a new track
+    Given I check Required Track Courses label in Software System track
+    Then I should see "OPERATING SYSTEMS I"
+    And I should see "PROGRAMMING LANG & TRANSL"
+    And I should see "INTRODUCTION TO DATABASES"
+    And I should not see "ARTIFICIAL INTELLIGENCE"
+    Then I uncheck Required Track Courses label in Software System track
+    And I should see "ARTIFICIAL INTELLIGENCE"
+
+
 
   Scenario: find courses that fulfill multiple requirements in a track
     Given I check multiple labels: Required Track Courses, Breadth - Systems in Software System track
