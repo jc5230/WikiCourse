@@ -15,7 +15,8 @@ class CoursesController < ApplicationController
 
     @breadth3 = params[:breadth3] ? params[:breadth3] : '0'
 
-    @breadth = !params[:breadth1] && !params[:breadth2] && !params[:breadth3] ? ['B1','B2','B3','0', nil] : [@breadth1, @breadth2, @breadth3]
+    @breadth = !params[:breadth1] && !params[:breadth2] && !params[:breadth3] ? ['B1', 'B2', 'B3', '0', 
+nil] : [@breadth1, @breadth2, @breadth3]
 
     @required = params[:required] ? params[:required].to_i : [1, 0, nil]
 
@@ -36,7 +37,17 @@ class CoursesController < ApplicationController
     @comments = Comment.where(call: @call)
   end
 
+  def comment
+    @call = params[:call]
+    @title = Course.find_by_call(@call).title
+    unless params[:comment].nil?
+      Comment.create(call:@call, rating:params[:rating], upvote:params[:upvote], downvote:params[:downvote],
+                     workload:params[:workload], description:params[:comment])
+      redirect_to courses_detail_path(call: @call)
+    end
 
+  end
+  protect_from_forgery prepend:
+                         true
 end
-
 
