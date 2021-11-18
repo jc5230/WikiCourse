@@ -5,11 +5,23 @@ module NavigationHelpers
     when /^the home page$/
       courses_home_path
 
+    when /^Back to home$/
+      courses_home_path
+
     when /^the main page$/
       courses_main_path
 
     when/^the detail page for "(.+)"$/
       courses_detail_path(:call=>Course.find_by_title($1).call)
+
+
+    when/^the comment page for "(.+)"$/
+      courses_comment_path(:call=>Course.find_by_title($1).call)
+
+    when/^Submit$/
+      courses_detail_path(@call)
+    else
+      courses_comment_path(:call=>Course.find_by_title(page_name).call)
 
     end
   end

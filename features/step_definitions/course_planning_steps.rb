@@ -15,6 +15,7 @@ end
 And /^I click on the call number (\d+)$/ do |call|
   visit path_to_detail_page(call)
 end
+
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   visit path_to(link)
 end
@@ -55,4 +56,13 @@ end
 
 Then(/^(?:|I )uncheck ([^"]*) label in ([^"]*) track$/) do |label, track|
   visit path_to_track(track)
+end
+
+And(/^I click on Rate This Course for "([^"]*)"$/) do |page_name|
+  visit path_to(page_name)
+end
+
+Then(/^I write some comments$/) do
+  find("#comment").set 'new comments'
+
 end

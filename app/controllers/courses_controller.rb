@@ -41,7 +41,7 @@ nil] : [@breadth1, @breadth2, @breadth3]
     @call = params[:call]
     @title = Course.find_by_call(@call).title
     unless params[:comment].nil?
-      Comment.create(call:@call, rating:params[:rating], upvote:params[:upvote], downvote:params[:downvote],
+      Comment.create(call:@call, rating:params[:rating], upvote:params[:upvote], downvote:params[:downvote],professor:params[:professor],
                      workload:params[:workload], description:params[:comment])
       redirect_to courses_detail_path(call: @call)
     end

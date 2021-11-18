@@ -44,8 +44,6 @@ Feature: search for courses by track requirements
     Then I uncheck Required Track Courses label in Software System track
     And I should see "ARTIFICIAL INTELLIGENCE"
 
-
-
   Scenario: find courses that fulfill multiple requirements in a track
     Given I check multiple labels: Required Track Courses, Breadth - Systems in Software System track
     Then I should see "INTRODUCTION TO DATABASES"
@@ -68,6 +66,14 @@ Feature: search for courses by track requirements
     Given I am on the detail page for "INTRODUCTION TO DATABASES"
     Then I should see "Student Comments"
     And I should see "rating workload description professor date"
+
+  Scenario: add a new comment to a course
+    Given I am on the detail page for "INTRODUCTION TO DATABASES"
+    And I click on Rate This Course for "INTRODUCTION TO DATABASES"
+    Then I should be on the comment page for "INTRODUCTION TO DATABASES"
+    Then I write some comments
+    Then I follow "Submit"
+    Then I should be on the detail page for "INTRODUCTION TO DATABASES"
 
   Scenario: go back to the home page after see the course descriptions
     Given I am on the detail page for "INTRODUCTION TO DATABASES"

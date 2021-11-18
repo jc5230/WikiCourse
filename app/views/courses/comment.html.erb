@@ -112,7 +112,7 @@
 <body>
 <div class="main-block">
 
-    <form method="post" action="">
+    <form method="post" action="" id='comment_form'>
   <h1>Course Comment</h1>
     <table>
   <h4><%=@title %></h4>
@@ -147,8 +147,9 @@
     </tr>
   </table>
     <p class="comments">Comments</p>
-    <textarea rows="5" name="comment"></textarea>
-    <input type='Submit', value="submit">
+    <textarea rows="5" name="comment" id="comment"></textarea>
+    <%= submit_tag "submit", :class => 'btn btn-primary' %>
+
     </form>
 
 </div>
