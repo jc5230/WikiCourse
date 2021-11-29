@@ -1,8 +1,43 @@
-<h1>Login</h1>
-   <%= form_tag '/login' do %>
-   <%= label_tag :username%>
-   <%= text_field_tag :username %>
-   <%= label_tag :password%>
-   <%= password_field_tag :password%>
-   <%= submit_tag "Login"%>
-<%end%>
+<html lang="en">
+<head>
+  <title>WikiCourse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tag-style.css">
+</head>
+<body>
+<div class="main-login">
+
+  <div class="login-banner">
+    <h1>Login</h1>
+    <div class="login-form">
+       <%= form_tag'/login' do %>
+      <div id="login-un">
+      <%= label_tag :username%>
+      </div>
+      <div>
+       <%= text_field_tag :username %>
+      </div>
+      <div id="login-pw">
+       <%= label_tag :password%>
+      </div>
+      <div>
+       <%= password_field_tag :password%>
+      </div>
+      <div id="login-bt">
+       <%= submit_tag"Login"%>
+      </div>
+    <%end%>
+    </div>
+  </div>
+
+  <div class="deco-empty"></div>
+  <div class="deco-right"></div>
+
+</div>
+</body>
+</html>

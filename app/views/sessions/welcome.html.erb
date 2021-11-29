@@ -1,6 +1,37 @@
-<h1>Welcome</h1>
-<% if logged_in? %>
-    <h1>You are Logged In, <%= current_user.username %></h1>
-<%end%>
-<%= button_to "Login", '/login', method: :get%>
-<%= button_to "Sign Up", '/users/new', method: :get%>
+<html lang="en">
+<head>
+  <title>WikiCourse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tag-style.css">
+</head>
+<body>
+<div class="main-welcome">
+  <div class="title-banner">
+    <h1 class="title-wiki">WikiCourse</h1>
+    <h5 class="subtitle">Your Personal Course Planning Advisor</h5>
+    <div class="msg">
+      <% if logged_in? %>
+        <h4>Howdy, <%= current_user.username %>!</h4>
+      <% else %>
+        <div class="buttons">
+          <div class="button-login">
+            <%= button_to "Login", '/login', method: :get, class: 'button-17'%>
+          </div>
+          <div class="button-signup">
+            <%= button_to "Sign Up", '/users/new', method: :get, class: 'button-signup button-17'%>
+          </div>
+        </div>
+      <%end%>
+
+    </div>
+  </div>
+  <div class="deco-empty"></div>
+  <div class="background-image"></div>
+</div>
+</body>
+</html>

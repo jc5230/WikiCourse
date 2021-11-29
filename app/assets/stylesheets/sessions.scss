@@ -1,3 +1,174 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.title-banner {
+  min-height: 500px;
+  flex-grow:1;
+  background-color: #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content:center;
+  padding: 20px;
+}
+.title-wiki {
+  text-align: left;
+  font-family: Georgia, serif;
+  font-size: 50px;
+  color: #274C77;
+}
+.subtitle {
+  text-align: left;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #274C77;
+  margin-bottom: 20px;
+}
+.deco-empty {
+  min-height: 500px;
+  min-width: 100px;
+  background-color: #89c2d9;
+  flex-grow:1;
+}
+.background-image {
+  min-height: 500px;
+  min-width: 100px;
+  background-image: url(asset_path('bg.jpg'));
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-grow:2;
+}
+
+.main-welcome {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button-login {
+  margin-right:10px;
+}
+
+.button-17 {
+align-items: center;
+appearance: none;
+background-color: #fff;
+border-radius: 24px;
+border-style: none;
+box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+box-sizing: border-box;
+color: #3c4043;
+cursor: pointer;
+display: inline-flex;
+fill: currentcolor;
+font-family: "Google Sans",Roboto,Arial,sans-serif;
+font-size: 14px;
+font-weight: 500;
+height: 48px;
+justify-content: center;
+letter-spacing: .25px;
+line-height: normal;
+max-width: 100%;
+overflow: visible;
+padding: 2px 24px;
+position: relative;
+text-align: center;
+text-transform: none;
+transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: auto;
+will-change: transform,opacity;
+z-index: 0;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 1px solid #4285f4;
+}
+
+.main-login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.login-banner {
+  min-height: 500px;
+  flex-grow:4;
+  background-color: #e9ecef;
+  padding-top: 50px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.deco-right {
+  min-height: 500px;
+  min-width: 100px;
+  background-color: #023e8a;
+  flex-grow:2;
+}
+
+.login-form {
+  width: 500px;
+}
+
+#login-un, #login-pw, #login-bt {
+  margin-top: 10px;
+}
+
+
+.main-signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.deco-left {
+  min-height: 500px;
+  min-width: 100px;
+  background-color: #e9ecef;
+  flex-grow:1;
+}
+
+.signup-banner {
+  min-height: 500px;
+  flex-grow:4;
+  background-color: #89c2d9;
+  padding-top: 50px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#title-signup {
+  color: white;
+}
+
+#signup-un, #signup-pw, #signup-bt{
+  color:white;
+  margin-top: 10px;
+}
+
+.msg {
+  margin-top: 20px;
+}

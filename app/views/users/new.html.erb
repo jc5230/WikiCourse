@@ -1,10 +1,36 @@
-<h1>Sign In</h1>
+<html lang="en">
+<head>
+  <title>WikiCourse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<%= form_for @user do |f|%>
-    <%= f.label :username%><br>
-    <%= f.text_field :username%><br>
-    <%= f.label :password%><br>
-    <%= f.password_field :password%><br>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <%= f.submit %>
-<%end%>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tag-style.css">
+</head>
+<body>
+<div class="main-signup">
+  <div class="deco-left"></div>
+  <div class="signup-banner">
+    <h1 id="title-signup">Sign Up</h1>
+    <div class="signup-form">
+    <%= form_for @user do |f|%>
+        <div id="signup-un">
+        <%= f.label :username%><br>
+        </div>
+        <%= f.text_field :username%><br>
+          <div id="signup-pw">
+        <%= f.label :password%><br>
+          </div>
+        <%= f.password_field :password%><br>
+            <div id="signup-bt">
+        <%= f.submit %>
+            </div>
+    <%end%>
+    </div>
+  </div>
+  <div class="deco-right"></div>
+</div>
+</body>
+</html>
