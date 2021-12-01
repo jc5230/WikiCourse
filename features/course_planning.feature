@@ -11,6 +11,10 @@ Feature: search for courses by track requirements
       | 12547 | PROGRAMMING LANG & TRANSL | COMS W4115 | 3   | some intro for PLT | Software System  | B1       | 1         | 1         |
       | 12539 | OPERATING SYSTEMS I       | COMS W4118 | 3   | some intro for OS  | Software System  | B2       | 1         | 0         |
       | 12503 | ARTIFICIAL INTELLIGENCE   | COMS W4701 | 3   | some intro for AI  | Software System  | B3       | 0         | 0         |
+    Given the following users exist:
+      | username | password | 
+      | test     | test     |
+  
   Scenario: show all courses
     Given I am on the home page
     Then I should see 5 seed courses
@@ -67,7 +71,19 @@ Feature: search for courses by track requirements
     Then I should see "Student Comments"
     And I should see "rating workload description professor date"
 
-  Scenario: add a new comment to a course
+  Scenario: add a new comment to a course without login - should fail
+    Given I am on the detail page for "INTRODUCTION TO DATABASES"
+    And I click on Rate This Course for "INTRODUCTION TO DATABASES"
+    Then I should be on the welcome page 
+    
+  Scenario: login
+    Given I log in the login page
+    Then I enter my credentials
+    Then I press "login-bt"
+  
+  Scenario: add a new comment to a course with login - should success
+    Given I log in the login page
+    Then I enter my credentials
     Given I am on the detail page for "INTRODUCTION TO DATABASES"
     And I click on Rate This Course for "INTRODUCTION TO DATABASES"
     Then I should be on the comment page for "INTRODUCTION TO DATABASES"

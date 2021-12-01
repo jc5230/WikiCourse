@@ -11,6 +11,12 @@ module NavigationHelpers
     when /^the main page$/
       courses_main_path
 
+    when /^the welcome page$/
+      sessions_welcome_path
+
+    when /^the login page$/
+      sessions_new_path
+
     when/^the detail page for "(.+)"$/
       courses_detail_path(:call=>Course.find_by_title($1).call)
 

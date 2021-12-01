@@ -4,7 +4,17 @@ Given(/^the following courses exist:$/) do |courses_table|
   end
 end
 
+Given(/^the following users exist:$/) do |users_table|
+  users_table.hashes.each do |user|
+    User.create user
+  end
+end
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
+  visit path_to(page_name)
+end
+
+Given /^(?:|I )log in (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
@@ -64,5 +74,15 @@ end
 
 Then(/^I write some comments$/) do
   find("#comment").set 'new comments'
+end
 
+Then(/^I enter my credentials$/) do
+  find("#login-un").set 'test'
+  find("#login-pw").set 'test'
+end
+
+When /^I press "([^\"]*)"$/ do |button|
+      
+  click_button(button)
+  
 end

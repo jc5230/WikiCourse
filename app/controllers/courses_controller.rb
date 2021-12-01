@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
 
+  skip_before_action :authorized, only: [:home, :main, :detail]
+
   def home
     @courses = Course.all
   end
@@ -40,14 +42,22 @@ nil] : [@breadth1, @breadth2, @breadth3]
   def comment
     @call = params[:call]
     @title = Course.find_by_call(@call).title
-    unless params[:comment].nil?
-      Comment.create(call:@call, rating:params[:rating], upvote:params[:upvote], downvote:params[:downvote],professor:params[:professor],
+    if session[:user_id]
+      user_id = session[:user_id]
+    else
+      puts('not login') # TODO: redirect to welcome page?
+    end
+    puts(user_id)
+
+    if params[:comment] != nil
+      Comment.create(user_id: user_id, call:@call, rating:params[:rating], upvote:params[:upvote], downvote:params[:downvote],professor:params[:professor],
                      workload:params[:workload], description:params[:comment])
       redirect_to courses_detail_path(call: @call)
     end
 
   end
-  protect_from_forgery prepend:
-                         true
+  # protect_from_forgery prepend:
+  #                        true
+  protect_from_forgery with: :null_session
 end
 

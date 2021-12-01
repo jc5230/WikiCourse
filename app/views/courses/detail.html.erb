@@ -16,7 +16,7 @@
   <div id="menu">
     <div id="logo">
       WikiCourse
-      <p id="personal-sign">Personal Course Planning Advisor for <%= current_user.username %></p>
+      <p id="personal-sign">Personal Course Planning Advisor for <%= current_user==nil ? 'not login' : current_user.username %></p>
       <div id="back"><a href="home">Back to home</a></div>
     </div>
   </div>
