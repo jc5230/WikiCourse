@@ -43,6 +43,7 @@ nil] : [@breadth1, @breadth2, @breadth3]
     unless params[:comment].nil?
       Comment.create(call:@call, rating:params[:rating], upvote:params[:upvote], downvote:params[:downvote],professor:params[:professor],
                      workload:params[:workload], description:params[:comment])
+
       redirect_to courses_detail_path(call: @call)
     end
 

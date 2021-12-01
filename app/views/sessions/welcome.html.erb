@@ -16,7 +16,7 @@
     <h5 class="subtitle">Your Personal Course Planning Advisor</h5>
     <div class="msg">
       <% if logged_in? %>
-        <h4>Howdy, <%= current_user.username %>!</h4>
+        <h4>Welcome, <%= current_user.username %>! <br>Go to your <%= link_to "personal course planning advisor", courses_home_path%></h4>
       <% else %>
         <div class="buttons">
           <div class="button-login">
