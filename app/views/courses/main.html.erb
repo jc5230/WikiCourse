@@ -83,9 +83,9 @@
 <table class="table table-striped col-md-12" id="course">
   <thead>
     <tr>
-      <th>call</th>
-      <th>title</th>
       <th>number</th>
+      <th>title</th>
+      
       <th>pts</th>
       <th>description</th>
       <th hidden=true>track</th>
@@ -100,14 +100,12 @@
     <% @courses.each do |course| %>
       <tr>
         <td>
-          <%= link_to course.call, courses_detail_path(call: course.call) %>
+          <%= link_to course.number, courses_detail_path(call: course.call) %>
         </td>
         <td>
           <%= course.title %>
         </td>
-        <td>
-          <%= course.number %>
-        </td>
+   
         <td>
           <%= course.pts %>
         </td>
