@@ -1,3 +1,5 @@
+require 'set'
+
 class CoursesController < ApplicationController
 
   skip_before_action :authorized, only: [:home, :main, :detail]
@@ -30,6 +32,11 @@ nil] : [@breadth1, @breadth2, @breadth3]
     else
       @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective)
     end
+    puts(params[:add])
+    if params[:add] !=nil
+      puts(params[:add])
+      User_courses.create(username: :current_user,course_number: params[:add])
+    end
 
   end
 
@@ -37,6 +44,17 @@ nil] : [@breadth1, @breadth2, @breadth3]
     @call = params[:call] ? params[:call] : 12539
     @courses = Course.where(call: @call).limit(1)
     @comments = Comment.where(call: @call)
+  end
+
+  def add
+    @number = params[:number] ? params[:number] : 'COMs ???'
+    user_id = session[:user_id]
+    @courses = Course.where(number: @number).limit(1)
+    if session[:added_courses] == nil
+      session[:added_courses] = []
+    end
+    session[:added_courses].append(@courses)
+    session[:added_courses] = session[:added_courses].to_set
   end
 
   def comment
@@ -56,8 +74,10 @@ nil] : [@breadth1, @breadth2, @breadth3]
     end
 
   end
+
   # protect_from_forgery prepend:
   #                        true
   protect_from_forgery with: :null_session
+
 end
 

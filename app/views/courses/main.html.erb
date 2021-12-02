@@ -88,6 +88,7 @@
       
       <th>pts</th>
       <th>description</th>
+      <th>add to planner</th>>
       <th hidden=true>track</th>
       <th hidden=true>breadth</th>
       <th hidden=true>required</th>
@@ -111,6 +112,9 @@
         </td>
         <td>
           <%= course.description %>
+        </td>
+        <td>
+          <%= button_to 'add' , courses_add_path(number: course.number) %>
         </td>
         <td hidden=true>
           <%= course.track %>
