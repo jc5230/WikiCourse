@@ -25,7 +25,7 @@
   </ul>
   <div id="logo">
     WikiCourse
-  <p id="personal-sign">Personal Course Planning Advisor for <%= current_user.username %></p>
+  <p id="personal-sign">Personal Course Planning Advisor for <%= current_user==nil ? 'not login' : current_user.username %></p>
   </div>
 </div>
 
