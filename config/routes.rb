@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cart/show'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/login'

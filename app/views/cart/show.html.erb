@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Course Comment</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1> Course Planner</h1>
+
+<p>Track: Machine Learning</p>
+<table>
+  <thead>
+  <tr>
+    <th>Courses</th>
+    <th>Required Track</th>
+    <th>Track Elective</th>
+    <th>Breadth G1</th>
+    <th>Breadth G2</th>
+    <th>Breadth G3</th>
+    <th>6000-Level</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @courses.each do |course| %>
+  <tr>
+    <td> <%= course.title%></td>
+    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.required == 1? false: true %></td>
+    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.elective == 1? false: true %></td>
+    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.breadth == 'B1'? false: true %></td>
+    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.breadth == 'B2'? false: true %></td>
+    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.breadth == 'B3'? false: true %></td>
+    <td>
+      <% if course.title[/\d/] == 6 %>
+        <p>Yes</p>
+        <% else %>
+        <p>No</p>
+        <% end %>
+  </tr>
+    <%end %>
+  </tbody>
+</table>
+
+
+</body>
+</html>
