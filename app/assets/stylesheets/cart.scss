@@ -2,69 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.track-selection-title {
+  width: 500px;
+  text-align: center;
+  margin:10px auto 10px auto;
+}
+
+.track-selection-label {
+  width: 500px;
+  text-align: center;
+  margin:10px auto 10px auto;
+  font-size: 20px;
+}
+
+.course-form {
+  width: 1000px;
+  margin: 10px auto 10px auto;
+}
+
+.make-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Customize the label (the container) */
-.container {
+.track-selection a{
   display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  height:50px;
+  width: 500px;
+  color:black;
+  padding: 8px 16px;
+  margin:10px auto 10px auto;
+  background-color:#E7ECEF;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
 }
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.track-selection a:hover {
+  color:white;
+  background-color:#6096BA;
+  text-decoration: none;
 }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+ul#track-selection-menu {
+  margin:0px;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
 }

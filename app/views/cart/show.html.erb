@@ -5,10 +5,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1> Course Planner</h1>
 
-<p>Track: Machine Learning</p>
-<table>
+
+<div class="course-form">
+  <h1 class="make-center"> Course Planner</h1>
+
+  <h4 class="make-center">Track: <%= params[:track]%></h4>
+<%= form_with method: :get do |form| %>
+<table class="table table-hover">
   <thead>
   <tr>
     <th>Courses</th>
@@ -22,24 +26,26 @@
   </thead>
   <tbody>
   <% @courses.each do |course| %>
-  <tr>
-    <td> <%= course.title%></td>
-    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.required == 1? false: true %></td>
-    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.elective == 1? false: true %></td>
-    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.breadth == 'B1'? false: true %></td>
-    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.breadth == 'B2'? false: true %></td>
-    <td> <%= check_box_tag 'checkbox', 'true', false, :disabled => course.breadth == 'B3'? false: true %></td>
-    <td>
-      <% if course.title[/\d/] == 6 %>
-        <p>Yes</p>
+    <tr>
+      <td><%= form.label :query, course.title %></td>
+      <td><%= form.check_box :required, disabled: course.required != 1 %></td>
+      <td><%= form.check_box :elective, disabled: course.elective != 1 %></td>
+      <td><%= form.check_box :breadth1, disabled: course.breadth != 'B1' %></td>
+      <td><%= form.check_box :breadth2, disabled: course.breadth != 'B2' %></td>
+      <td><%= form.check_box :breadth3, disabled: course.breadth != 'B3' %></td>
+      <td>
+        <% if course.title[/\d/] == 6 %>
+          <p>Yes</p>
         <% else %>
-        <p>No</p>
+          <p>No</p>
         <% end %>
-  </tr>
-    <%end %>
+      </td>
+    </tr>
+  <%end %>
   </tbody>
 </table>
-
-
+  <div class="make-center"><%= form.submit "Search", class:'button-17' %></div>
+<% end %>
+</div>
 </body>
 </html>
