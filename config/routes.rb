@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'planner/main'
+  get 'planner/show'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/login'

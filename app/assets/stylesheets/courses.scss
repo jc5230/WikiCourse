@@ -23,18 +23,19 @@ ul#track-menu {
   list-style-type: none;
   overflow: auto;
 }
-#back {
-  font-size:20px;
-}
-#logo {
+
+.bottom-menu {
   font-family: Georgia, serif;
-  font-size: 40px;
+  font-size: 20px;
   color: #274C77;
   position: fixed;
   bottom: 10px;
   left: 20px;
   right:20px;
   width: 18%;
+}
+.logo {
+  font-size: 40px;
 }
 .track-label a{
   display: block;
@@ -96,7 +97,7 @@ ul#track-menu {
   border-radius: 25px;
   white-space: nowrap;
 }
-#personal-sign {
+.personal-sign {
   font-family: Georgia, serif;
   color: #274C77;
   font-size: 20px;

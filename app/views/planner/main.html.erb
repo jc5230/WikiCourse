@@ -1,2 +1,20 @@
-<h1>Planner#main</h1>
-<p>Find me in app/views/planner/main.html.erb</p>
+<html>
+<head>
+  <title>Course Comment</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="track-selection-title"> Course Planner</h1>
+<div class="track-selection-label"><p>Select your track</p></div>
+<ul id="track-selection-menu">
+  <%  Track.all_tracks.each do |track| %>
+    <li class="track-selection">
+      <%= link_to track, planner_show_path(track:track), class: ('bg-warning' if params[:track] == track)%>
+    </li>
+  <% end %>
+</ul>
+
+
+</body>
+</html>

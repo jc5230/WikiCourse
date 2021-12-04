@@ -1,6 +1,10 @@
 class PlannerController < ApplicationController
   def main
-    @courses = session[:added_courses]
-    puts(@courses)
+    @user_courses = session[:added_courses]
+    puts(@user_courses)
+  end
+
+  def show
+    @user_courses = session[:added_courses]
   end
 end

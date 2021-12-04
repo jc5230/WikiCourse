@@ -31,7 +31,7 @@
 
 <div class="main">
   <h2> All Courses </h2>
-  <table class="table table-striped col-md-12" id="course">
+  <table class="table table-striped col-md-12">
     <thead>
     <tr>
       <th>call</th>
@@ -57,7 +57,7 @@
           <%= course.pts %>
         </td>
         <td>
-          <%= course.description %>
+          <%= course.description.length >= 100 ? course.description[0..100].gsub(/\s\w+\s*$/, '...') : course.description %>
         </td>
       </tr>
     <% end %>

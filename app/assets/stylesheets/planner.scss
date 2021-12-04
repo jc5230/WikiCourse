@@ -1,3 +1,55 @@
 // Place all the styles related to the Planner controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.track-selection-title {
+  width: 500px;
+  text-align: center;
+  margin:10px auto 10px auto;
+}
+
+.track-selection-label {
+  width: 500px;
+  text-align: center;
+  margin:10px auto 10px auto;
+  font-size: 20px;
+}
+
+.course-form {
+  width: 1000px;
+  margin: 10px auto 10px auto;
+}
+
+.make-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Customize the label (the container) */
+.track-selection a{
+  display: block;
+  height:50px;
+  width: 500px;
+  color:black;
+  padding: 8px 16px;
+  margin:10px auto 10px auto;
+  background-color:#E7ECEF;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.track-selection a:hover {
+  color:white;
+  background-color:#6096BA;
+  text-decoration: none;
+}
+
+ul#track-selection-menu {
+  margin:0px;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+}
