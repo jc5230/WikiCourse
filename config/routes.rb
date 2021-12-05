@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'courses/detail'
   get 'courses/home'
   get 'courses/comment'
+  get 'download/download_csv'
   post 'courses/comment'
   post 'courses/main'
   post 'courses/add'
