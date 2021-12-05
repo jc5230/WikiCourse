@@ -12,6 +12,8 @@ class PlannerController < ApplicationController
       puts '?????????????'
       puts c["title"]
       puts c["number"][/\d/]=='6'
+      puts c["required"]
+      puts c["required"].class
     end
 
 

@@ -28,8 +28,8 @@
       <tbody>
       <% @user_courses.each do |course| %>
         <tr>
-          <td><%= form.label :query, course["number"] %></td>
-          <td><%= form.label :query, course["title"] %></td>
+          <td><%= form.label :number, course["number"] %></td>
+          <td><%= form.label :title, course["title"] %></td>
           <td><%= form.check_box :required, disabled: course["required"] != 1    %></td>
           <td><%= form.check_box :elective, disabled: course["elective"] != 1    %></td>
           <td><%= form.check_box :breadth1, disabled: course["breadth"]  != 'B1' %></td>

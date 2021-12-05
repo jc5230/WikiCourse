@@ -64,7 +64,7 @@ courses = [
 :description => ' COMPUTER ANIMATION',
 :track => 'Machine Learning',
 :breadth => 'B1',
-:required => 1,
+:required => 0,
 :elective => 0,
 },
 {:call => 12523,
