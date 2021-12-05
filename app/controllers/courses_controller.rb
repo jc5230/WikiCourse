@@ -50,11 +50,42 @@ nil] : [@breadth1, @breadth2, @breadth3]
     @number = params[:number] ? params[:number] : 'COMs ???'
     user_id = session[:user_id]
     @courses = Course.where(number: @number).limit(1)
+
+    puts(@courses[0].title)
+
+
     if session[:added_courses] == nil
       session[:added_courses] = []
     end
-    session[:added_courses].append(@courses)
-    session[:added_courses] = session[:added_courses].to_set
+    session[:added_courses].append(@courses[0])
+    
+
+    arr = []
+    @title = "title"
+    session[:added_courses].each do |course|
+      puts("-----------------")
+      puts(course.class)
+      puts(course[0].class)
+      puts(course[@title])
+
+      # puts(course[0])
+      # # puts(course[0].values)
+      # puts(course[0][@title])
+      if course.class==Course || course.class==Hash
+        arr.append(course)
+      end
+
+
+    end 
+    arr = arr.to_set
+    session[:added_courses] = arr
+    puts("---length----")
+    puts(session[:added_courses].length)
+
+
+    
+
+    
   end
 
   def comment
