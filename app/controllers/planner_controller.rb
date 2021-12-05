@@ -6,5 +6,6 @@ class PlannerController < ApplicationController
 
   def show
     @user_courses = session[:added_courses]
+    @courses = Course.all
   end
 end

@@ -25,7 +25,7 @@
       </tr>
       </thead>
       <tbody>
-      <% @user_courses.each do |course| %>
+      <% @courses.each do |course| %>
         <tr>
           <td><%= form.label :query, course.title %></td>
           <td><%= form.check_box :required, disabled: course.required != 1 %></td>
@@ -44,7 +44,10 @@
       <%end %>
       </tbody>
     </table>
-    <div class="make-center"><%= form.submit "Search", class:'button-17' %></div>
+    <div class="make-center">
+      <div class="form-button"><%= form.submit "Search", class:'button-17' %></div>
+      <div class="form-button"><%= link_to 'Export', "/MSrequirementschecklist.csv", class: 'button-17' %></div>
+    </div>
   <% end %>
 </div>
 </body>
