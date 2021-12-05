@@ -23,7 +23,7 @@
     <div class="bottom-menu">
       <div class="logo">WikiCourse</div>
       <p class="personal-sign">Personal Course Planning Advisor for <%= current_user==nil ? 'not login' : current_user.username %></p>
-      <div># of courses added to planner: <%= session[:added_courses].length%></div>
+      <div># of courses added to planner: <%= session[:added_courses] ? session[:added_courses].length : '0'%></div>
       <div class="gotoplanner"><a href="../planner/main">Go to planner page</a></div>
       <div class="back"><a href="home">Back to home</a></div>
     </div>
@@ -88,7 +88,7 @@
         <th>title</th>
         <th>pts</th>
         <th>description</th>
-        <th>add to planner</th>>
+        <th>add to planner</th>
         <th hidden=true>track</th>
         <th hidden=true>breadth</th>
         <th hidden=true>required</th>
