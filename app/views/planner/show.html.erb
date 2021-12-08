@@ -34,7 +34,7 @@
           <td><%= form.check_box :breadth2, disabled: course.breadth != 'B2' %></td>
           <td><%= form.check_box :breadth3, disabled: course.breadth != 'B3' %></td>
           <td>
-            <% if course.title[/\d/] == 6 %>
+            <% if course.title[/\d/] == '6' %>
               <p>Yes</p>
             <% else %>
               <p>No</p>
