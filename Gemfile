@@ -55,6 +55,10 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do 
+  gem 'pg'         #gem to use in production environment
+end
+
 gem 'rspec'
 group :test do
   gem 'cucumber-rails', require: false
