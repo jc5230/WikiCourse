@@ -16,3 +16,6 @@ We have a home page displaying all the courses. We are also able to choose which
 
 Link to your GitHub repo
 https://github.com/jc5230/WikiCourse
+
+
+update: db, config/routes.rb, app
