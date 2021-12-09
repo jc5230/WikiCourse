@@ -7,46 +7,49 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="menu">
-  <div id="menu-info">
-    Select your track:
-  </div>
+<div>
+  <div id="menu">
+    <div id="menu-info">
+      Select your track:
+    </div>
 
-  <ul id="track-menu">
-    <%  Track.all_tracks.each do |track| %>
-      <li class="track-label">
-        <%= link_to track, courses_main_path(track:track), class: ('bg-warning' if params[:track] == track)%>
-          </li>
-    <% end %>
-  </ul>
-  <div id="back"><a href="home">Back to home</a></div>
-  <div id="logo">
-    WikiCourse
+    <ul id="track-menu">
+      <%  Track.all_tracks.each do |track| %>
+        <li class="track-label">
+          <%= link_to track, courses_main_path(track:track), class: ('bg-warning' if params[:track] == track)%>
+            </li>
+      <% end %>
+    </ul>
+    <div class="bottom-menu">
+      <div class="logo">WikiCourse</div>
+      <p class="personal-sign">Personal Course Planning Advisor for <%= current_user==nil ? 'not login' : current_user.username %></p>
+      <div># of courses added to planner: <%= session[:added_courses] ? session[:added_courses].length : '0'%></div>
+      <div class="gotoplanner"><a href="../planner/main">Go to planner page</a></div>
+      <div class="back"><a href="home">Back to home</a></div>
+    </div>
   </div>
-</div>
-<div class="main">
-  <div class="select">
-    <div class="select-box">
-      <%= link_to "Required Track Courses",
-                  courses_main_path({track:params[:track],
-                                     required:params[:required] == '1'? nil : '1',
-                                     elective:params[:elective],
-                                     breadth1: params[:breadth1],
-                                     breadth2: params[:breadth2],
-                                     breadth3: params[:breadth3]}),
-                  class: ('bg-secondary text-white' if params[:required] == '1')%>
-    </div>
-    <div class="select-box">
-      <%= link_to "Track Electives",
-                  courses_main_path(track:params[:track],
-                                    required:params[:required],
-                                    elective:params[:elective] == '1'? nil : '1',
-                                    breadth1: params[:breadth1],
-                                    breadth2: params[:breadth2],
-                                    breadth3: params[:breadth3]),
-                  class: ('bg-secondary text-white' if params[:elective] == '1')%>
-    </div>
-    <div class="select-box">
+  <div class="main">
+    <div class="select">
+      <div class="select-box">
+        <%= link_to "Required Track Courses",
+                    courses_main_path({track:params[:track],
+                                       required:params[:required] == '1'? nil : '1',
+                                       elective:params[:elective],
+                                       breadth1: params[:breadth1],
+                                       breadth2: params[:breadth2],
+                                       breadth3: params[:breadth3]}),
+                    class: ('bg-secondary text-white' if params[:required] == '1')%>
+      </div>
+      <div class="select-box">
+        <%= link_to "Track Electives",
+                    courses_main_path(track:params[:track],
+                                      required:params[:required],
+                                      elective:params[:elective] == '1'? nil : '1',
+                                      breadth1: params[:breadth1],
+                                      breadth2: params[:breadth2],
+                                      breadth3: params[:breadth3]),
+                    class: ('bg-secondary text-white' if params[:elective] == '1')%>
+      </div>
       <div class="select-box">
         <%= link_to "Breadth - Systems",
                     courses_main_path(track:params[:track],
@@ -56,85 +59,87 @@
                                       breadth3:params[:breadth3],
                                       elective:params[:elective]),
                     class:('bg-secondary text-white' if params[:breadth1] == 'B1')%>
+      </div>
+      <div class="select-box">
+        <%= link_to "Breadth - Theory",
+                    courses_main_path(track:params[:track],
+                                      required:params[:required],
+                                      breadth1:params[:breadth1],
+                                      breadth2: params[:breadth2] == 'B2'? nil:'B2',
+                                      breadth3:params[:breadth3],
+                                      elective:params[:elective]),
+                    :class=>('bg-secondary text-white' if params[:breadth2] == 'B2')%>
+      </div>
+      <div class="select-box">
+        <%= link_to "Breadth - AI & Applications",
+                    courses_main_path(track:params[:track],
+                                      required:params[:required],
+                                      breadth1:params[:breadth1],
+                                      breadth2: params[:breadth2],
+                                      breadth3:params[:breadth3] == 'B3'? nil:'B3',
+                                      elective:params[:elective]),
+                    class:('bg-secondary text-white' if params[:breadth3] == 'B3')%>
+      </div>
     </div>
-    <div class="select-box">
-      <%= link_to "Breadth - Theory",
-                  courses_main_path(track:params[:track],
-                                    required:params[:required],
-                                    breadth1:params[:breadth1],
-                                    breadth2: params[:breadth2] == 'B2'? nil:'B2',
-                                    breadth3:params[:breadth3],
-                                    elective:params[:elective]),
-                  :class=>('bg-secondary text-white' if params[:breadth2] == 'B2')%>
-    </div>
-    <div class="select-box">
-      <%= link_to "Breadth - AI & Applications",
-                  courses_main_path(track:params[:track],
-                                    required:params[:required],
-                                    breadth1:params[:breadth1],
-                                    breadth2: params[:breadth2],
-                                    breadth3:params[:breadth3] == 'B3'? nil:'B3',
-                                    elective:params[:elective]),
-                  class:('bg-secondary text-white' if params[:breadth3] == 'B3')%>
-    </div>
-  </div>
-<table class="table table-striped col-md-12" id="course">
-  <thead>
-    <tr>
-      <th>call</th>
-      <th>title</th>
-      <th>number</th>
-      <th>pts</th>
-      <th>description</th>
-      <th hidden=true>track</th>
-      <th hidden=true>breadth</th>
-      <th hidden=true>required</th>
-      <th hidden=true>elective</th>
-      <th hidden=true>elective_group</th>
-      <th hidden=true>required_group</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @courses.each do |course| %>
+    <table class="table table-striped col-md-12">
+    <thead>
       <tr>
-        <td>
-          <%= link_to course.call, courses_detail_path(call: course.call) %>
-        </td>
-        <td>
-          <%= course.title %>
-        </td>
-        <td>
-          <%= course.number %>
-        </td>
-        <td>
-          <%= course.pts %>
-        </td>
-        <td>
-          <%= course.description %>
-        </td>
-        <td hidden=true>
-          <%= course.track %>
-        </td>
-        <td hidden=true>
-          <%= course.breadth %>
-        </td>
-        <td hidden=true>
-          <%= course.required %>
-        </td>
-        <td hidden=true>
-          <%= course.elective %>
-        </td>
-        <td hidden=true>
-          <%= course.elective_group %>
-        </td>
-        <td hidden=true>
-          <%= course.required_group %>
-        </td>
+        <th>number</th>
+        <th>title</th>
+        <th>pts</th>
+        <th>description</th>
+        <th>add to planner</th>
+        <th hidden=true>track</th>
+        <th hidden=true>breadth</th>
+        <th hidden=true>required</th>
+        <th hidden=true>elective</th>
+        <th hidden=true>elective_group</th>
+        <th hidden=true>required_group</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td>
+            <%= link_to course.number, courses_detail_path(call: course.call) %>
+          </td>
+          <td>
+            <%= course.title %>
+          </td>
+
+          <td>
+            <%= course.pts %>
+          </td>
+          <td>
+            <%= course.description.length >= 100 ? course.description[0..100].gsub(/\s\w+\s*$/, '...') : course.description %>
+          </td>
+          <td>
+            <%= button_to 'add' , courses_add_path(number: course.number) %>
+          </td>
+          <td hidden=true>
+            <%= course.track %>
+          </td>
+          <td hidden=true>
+            <%= course.breadth %>
+          </td>
+          <td hidden=true>
+            <%= course.required %>
+          </td>
+          <td hidden=true>
+            <%= course.elective %>
+          </td>
+          <td hidden=true>
+            <%= course.elective_group %>
+          </td>
+          <td hidden=true>
+            <%= course.required_group %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
 </div>
-</div>
+
 </body>
 </html>

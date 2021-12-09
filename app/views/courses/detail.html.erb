@@ -1,16 +1,23 @@
 <html lang="en">
+
 <head>
   <title>WikiCourse</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+      html, body {
+          min-height: "100%";
+      }
+  </style>
 </head>
 <body>
   <div id="menu">
-    <div id="back"><a href="home">Back to home</a></div>
     <div id="logo">
       WikiCourse
+      <p id="personal-sign">Personal Course Planning Advisor for <%= current_user==nil ? 'not login' : current_user.username %></p>
+      <div id="back"><a href="home">Back to home</a></div>
     </div>
   </div>
   <div class="main-detail">
@@ -18,8 +25,7 @@
     <% @courses.each do |course| %>
     <div class="detail-title">Title: </div>
       <div class="detail-content"><h4><%= course.title %></h4></div>
-    <div class="detail-title">Call: </div>
-    <div class="detail-content"><h4><%= course.call %></h4></div>
+ 
     <div class="detail-title">Number: </div>
     <div class="detail-content"><h4><%= course.number %></h4></div>
     <div class="detail-title">Points: </div>
@@ -62,12 +68,12 @@
         <% end %>
         </tbody>
       </table>
-
+      <div class="select-box">
+        <%= link_to "Rate This Course",courses_comment_path(call:@call)%>
+      </div>
 
     </div>
   </div>
-
-
 
 
 </body>

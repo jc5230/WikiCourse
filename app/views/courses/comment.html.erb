@@ -1,0 +1,160 @@
+<html>
+<head>
+  <title>Course Comment</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html, body {
+          min-height: 100%;
+      }
+      body, input {
+          padding: 5px;
+          margin: 5px;
+          outline: none;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          font-size: 14px;
+          color: #666;
+          line-height: 22px;
+      }
+      h1, h4 {
+          font-weight: 400;
+      }
+      h4 {
+          margin: 22px 0 4px;
+      }
+      h5 {
+          text-transform: uppercase;
+          color: #095484;
+      }
+      .main-block {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 3px;
+          width:60%;
+          margin: auto;
+      }
+      form {
+          width: 100%;
+          padding: 20px;
+          box-shadow: 0 2px 5px #ccc;
+          background: #fff;
+      }
+      input {
+          width: calc(100% - 10px);
+          padding: 5px;
+          border-radius: 3px;
+          border: 1px solid #ccc;
+          vertical-align: middle;
+      }
+      textarea {
+          width: calc(100% - 6px);
+          outline: none;
+      }
+      input:hover, textarea:hover {
+          outline: none;
+          border: 1px solid #095484;
+      }
+      th, td {
+          width: 15%;
+          padding: 15px 0;
+          border-bottom: 1px solid #ccc;
+          text-align: center;
+          vertical-align: unset;
+          line-height: 18px;
+          font-weight: 400;
+          word-break: break-all;
+      }
+      .additional-question th, .additional-question td {
+          width: 38%;
+      }
+      .course-rate th, .course-rate td {
+          width: 19%;
+      }
+      .first-col, .additional-question  .first-col, .course-rate .first-col {
+          width: 24%;
+          text-align: left;
+      }
+      .question, .comments {
+          margin: 15px 0 5px;
+      }
+      .question-answer label {
+          display: inline-block;
+          padding: 0 20px 15px 0;
+      }
+      .question-answer input {
+          width: auto;
+      }
+      .question-answer, table {
+          width: 100%;
+      }
+      .btn-block {
+          margin-top: 20px;
+          text-align: center;
+      }
+      button {
+          width: 150px;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background: #095484;
+          font-size: 16px;
+          color: #fff;
+          cursor: pointer;
+      }
+      button:hover {
+          background: #0666a3;
+      }
+      @media (min-width: 568px) {
+          th, td {
+              word-break: keep-all;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="main-block">
+
+    <form method="post" action="" id='comment_form'>
+  <h1>Course Comment</h1>
+    <table>
+  <h4><%=@title %></h4>
+  <h4>Instructor</h4>
+  <input type="text" name="professor"/>
+      <input type="hidden" name="upvote" value="0"/>
+      <input type="hidden" name="downvote" value="0"/>
+      <input type="hidden" name="call" value=@call />
+    <tr>
+      <th class="first-col"></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+    <tr>
+      <td class="first-col">Workload</td>
+      <td><input type="radio" value=1 name="workload" /></td>
+      <td><input type="radio" value=2 name="workload" /></td>
+      <td><input type="radio" value=3 name="workload" /></td>
+      <td><input type="radio" value=4 name="workload" /></td>
+      <td><input type="radio" value=5 name="workload" /></td>
+    </tr>
+    <tr>
+      <td class="first-col">Overall Rating</td>
+      <td><input type="radio" value=1 name="rating" /></td>
+      <td><input type="radio" value=2 name="rating" /></td>
+      <td><input type="radio" value=3 name="rating" /></td>
+      <td><input type="radio" value=4 name="rating" /></td>
+      <td><input type="radio" value=5 name="rating" /></td>
+    </tr>
+  </table>
+    <p class="comments">Comments</p>
+    <textarea rows="5" name="comment" id="comment"></textarea>
+    <%= submit_tag "submit", :class => 'btn btn-primary' %>
+
+    </form>
+
+</div>
+</body>
+</html>

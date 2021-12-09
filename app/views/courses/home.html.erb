@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/tag-style.css">
 </head>
 <body>
+
+<div>
 <div id="menu">
   <div id="menu-info">
     Select your track:
@@ -23,11 +25,13 @@
   </ul>
   <div id="logo">
     WikiCourse
+  <p id="personal-sign">Personal Course Planning Advisor for <%= current_user==nil ? 'not login' : current_user.username %></p>
   </div>
 </div>
-<h2> All Courses </h2>
+
 <div class="main">
-  <table class="table table-striped col-md-12" id="course">
+  <h2> All Courses </h2>
+  <table class="table table-striped col-md-12">
     <thead>
     <tr>
       <th>call</th>
@@ -53,12 +57,13 @@
           <%= course.pts %>
         </td>
         <td>
-          <%= course.description %>
+          <%= course.description.length >= 100 ? course.description[0..100].gsub(/\s\w+\s*$/, '...') : course.description %>
         </td>
       </tr>
     <% end %>
     </tbody>
   </table>
+</div>
 </div>
 </body>
 </html>
