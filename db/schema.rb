@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_224748) do
+ActiveRecord::Schema.define(version: 2021_11_28_202819) do
 
   create_table "comments", force: :cascade do |t|
+    t.string "user_id"
     t.integer "call"
     t.integer "rating"
     t.integer "workload"
@@ -36,6 +37,13 @@ ActiveRecord::Schema.define(version: 2021_11_15_224748) do
     t.integer "elective"
     t.string "elective_group"
     t.string "required_group"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
