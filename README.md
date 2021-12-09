@@ -26,3 +26,5 @@ We have a home page displaying all the courses. We are also able to choose which
 
 Iter2 Update:We add courses detail page to view courses details. We also implement Comment model for courses comment feature. In addition, we add more user stories, Cucumber and Rspec tests.
 
+# heroku deployment
+- update: db, config/routes.rb, app
