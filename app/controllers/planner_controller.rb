@@ -6,6 +6,17 @@ class PlannerController < ApplicationController
 
   def show
     @user_courses = session[:added_courses]
-    @courses = Course.all
+
+
+    @user_courses.each do |c|
+      puts '?????????????'
+      puts c["title"]
+      puts c["number"][/\d/]=='6'
+      puts c["required"]
+      puts c["required"].class
+    end
+
+
+
   end
 end

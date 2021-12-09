@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'planner/main'
   get 'planner/show'
   get 'sessions/new'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
 
   # user authentication
   resources :users, only: [:new, :create]
+  get '/', to: 'sessions#welcome'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'welcome', to: 'sessions#welcome'
