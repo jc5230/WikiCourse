@@ -5,11 +5,29 @@ module NavigationHelpers
     when /^the home page$/
       courses_home_path
 
+    when /^Back to home$/
+      courses_home_path
+
     when /^the main page$/
       courses_main_path
 
+    when /^the welcome page$/
+      sessions_welcome_path
+
+    when /^the login page$/
+      sessions_new_path
+
     when/^the detail page for "(.+)"$/
       courses_detail_path(:call=>Course.find_by_title($1).call)
+
+
+    when/^the comment page for "(.+)"$/
+      courses_comment_path(:call=>Course.find_by_title($1).call)
+
+    when/^Submit$/
+      courses_detail_path(@call)
+    else
+      courses_comment_path(:call=>Course.find_by_title(page_name).call)
 
     end
   end
@@ -37,20 +55,7 @@ module NavigationHelpers
                         :breadth2=> nil,
                         :breadth3=>nil,
                         :elective=>'1')
-    when 'Breadth - Systems'
-      courses_main_path(:track=>track,
-                        :required=>nil,
-                        :breadth1=>'B1',
-                        :breadth2=> nil,
-                        :breadth3=>nil,
-                        :elective=>nil)
-    when 'Breadth - Theory'
-      courses_main_path(:track=>track,
-                        :required=>nil,
-                        :breadth1=>nil,
-                        :breadth2=>'B2',
-                        :breadth3=>nil,
-                        :elective=>nil)
+
     when 'Breadth - AI & Applications'
       courses_main_path(:track=>track,
                         :required=>nil,
