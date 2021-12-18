@@ -30,14 +30,15 @@
       <tbody>
       <% @user_courses.each do |course| %>
         <tr>
-          <td><%= form.label :number, course["number"] %></td>
-          <td><%= form.label :title, course["title"] %></td>
-          <td><%= form.check_box :required, disabled: course["required"] != 1    %></td>
-          <td><%= form.check_box :elective, disabled: course["elective"] != 1    %></td>
-          <td><%= form.check_box :breadth1, disabled: course["breadth"]  != 'B1' %></td>
-          <td><%= form.check_box :breadth2, disabled: course["breadth"]  != 'B2' %></td>
-          <td><%= form.check_box :breadth3, disabled: course["breadth"]  != 'B3' %></td>
+          <td><%= form.label :number, course.number %></td>
+          <td><%= form.label :title, course.title %></td>
+          <td><%= form.check_box :required, disabled: course.required != 1    %></td>
+          <td><%= form.check_box :elective, disabled: course.elective != 1    %></td>
+          <td><%= form.check_box :breadth1, disabled: course.breadth  != 'B1' %></td>
+          <td><%= form.check_box :breadth2, disabled: course.breadth  != 'B2' %></td>
+          <td><%= form.check_box :breadth3, disabled: course.breadth  != 'B3' %></td>
           <td>
+
             <% if course["number"][/\d/][0] == '6' %>
               <p>Yes</p>
             <% else %>

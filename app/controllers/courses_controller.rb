@@ -48,32 +48,26 @@ nil] : [@breadth1, @breadth2, @breadth3]
 
   def add
     @number = params[:number] ? params[:number] : 'COMs ???'
-    user_id = session[:user_id]
-    @courses = Course.where(number: @number).limit(1)
+    #  user_id = session[:user_id]
+    #  @courses = Course.where(number: @number).limit(1)
 
-    puts(@courses[0].title)
-
-
+    # puts(@courses[0].title)
     if session[:added_courses] == nil
       session[:added_courses] = []
     end
-    session[:added_courses].append(@courses[0])
+    session[:added_courses].append(@number)
     
 
     arr = []
     @title = "title"
     session[:added_courses].each do |course|
-      puts("-----------------")
-      puts(course.class)
-      puts(course[0].class)
-      puts(course[@title])
-
-      # puts(course[0])
-      # # puts(course[0].values)
-      # puts(course[0][@title])
-      if course.class==Course || course.class==Hash
-        arr.append(course)
-      end
+      #puts("-----------------")
+      #puts(course.class)
+      #puts(course[0].class)
+      #puts(course[@title])
+      #if course.class==Course || course.class==Hash
+      arr.append(course)
+      #end
 
 
     end 
