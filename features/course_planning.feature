@@ -11,8 +11,8 @@ Feature: search for courses by track requirements
       | 12547 | PROGRAMMING LANG & TRANSL | COMS W4115 | 3   | some intro for PLT | Software System  | B1       | 1         | 1         |
       | 12539 | OPERATING SYSTEMS I       | COMS W4118 | 3   | some intro for OS  | Software System  | B2       | 1         | 0         |
       | 12503 | ARTIFICIAL INTELLIGENCE   | COMS W4701 | 3   | some intro for AI  | Software System  | B3       | 0         | 0         |
+    
     Given the following users exist:
-      | username | password | 
       | test     | test     |
   
   Scenario: show all courses
@@ -60,6 +60,8 @@ Feature: search for courses by track requirements
     And  I should see "PROGRAMMING LANG & TRANSL"
     And I should not see "OPERATING SYSTEMS I"
 
+  
+
   Scenario: checkout the detail page of a course
     Given I check Breadth - AI & Applications label in Software System track
     And I click on the call number 12406
@@ -76,20 +78,36 @@ Feature: search for courses by track requirements
     And I click on Rate This Course for "INTRODUCTION TO DATABASES"
     Then I should be on the welcome page 
     
+  Scenario: signup
+    Given I sign up the signup page
+    Then I enter my credentials
+    Then I press Signup Button
+
   Scenario: login
     Given I log in the login page
-    Then I enter my credentials
-    Then I press "login-bt"
+    Then I enter my login credentials
+    Then I press Login Button
+
   
   Scenario: add a new comment to a course with login - should success
-    Given I log in the login page
+    Given I sign up the signup page
     Then I enter my credentials
+    Then I press Signup Button
     Given I am on the detail page for "INTRODUCTION TO DATABASES"
-    And I click on Rate This Course for "INTRODUCTION TO DATABASES"
+    Then I click on the call number 12406
     Then I should be on the comment page for "INTRODUCTION TO DATABASES"
     Then I write some comments
-    Then I follow "Submit"
+    Then I press submit Button
     Then I should be on the detail page for "INTRODUCTION TO DATABASES"
+
+  Scenario: add a course to planner
+    Given I sign up the signup page
+    Then I enter my credentials
+    Then I press Signup Button
+    And  I choose Machine Learning track
+    Then I press add Button for "COMS W4111"
+
+    
 
   Scenario: go back to the home page after see the course descriptions
     Given I am on the detail page for "INTRODUCTION TO DATABASES"

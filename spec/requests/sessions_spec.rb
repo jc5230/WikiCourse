@@ -10,21 +10,21 @@ RSpec.describe "Sessions", type: :request do
 
   describe "GET /create" do
     it "returns http success" do
-      get "/sessions/create"
+      get "/login"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /login" do
     it "returns http success" do
-      get "/sessions/login"
+      get "/login"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET /welcome" do
     it "returns http success" do
-      get "/sessions/welcome"
+      get "/welcome"
       expect(response).to have_http_status(:success)
     end
   end

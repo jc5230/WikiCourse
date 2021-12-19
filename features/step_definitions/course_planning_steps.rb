@@ -14,6 +14,10 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^(?:|I )sign up (.+)$/ do |page_name|
+  visit path_to(page_name)
+end
+
 Given /^(?:|I )log in (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -77,12 +81,28 @@ Then(/^I write some comments$/) do
 end
 
 Then(/^I enter my credentials$/) do
+  find("#signup-un").set 'test'
+  find("#signup-pw").set 'test'
+end
+
+Then(/^I enter my login credentials$/) do
   find("#login-un").set 'test'
   find("#login-pw").set 'test'
 end
 
-When /^I press "([^\"]*)"$/ do |button|
-      
-  click_button(button)
-  
+When /^I press Login Button$/ do 
+  click_button('Login')
+end
+
+When /^I press Signup Button$/ do 
+  click_button('Signup')
+end
+
+When /^I press submit Button$/ do 
+  click_button('submit')
+end
+
+
+Then /^I press add Button for "([^"]*)"$/ do |number|
+  courses_add_path(:number => number)
 end

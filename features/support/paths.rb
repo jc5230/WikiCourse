@@ -14,6 +14,9 @@ module NavigationHelpers
     when /^the welcome page$/
       sessions_welcome_path
 
+    when /^the signup page$/
+      users_new_path
+    
     when /^the login page$/
       sessions_new_path
 
@@ -23,18 +26,20 @@ module NavigationHelpers
 
     when/^the comment page for "(.+)"$/
       courses_comment_path(:call=>Course.find_by_title($1).call)
+    
 
     when/^Submit$/
       courses_detail_path(@call)
     else
       courses_comment_path(:call=>Course.find_by_title(page_name).call)
-
     end
+
   end
 
   def path_to_detail_page(call)
     courses_detail_path(:call=>call)
   end
+  
   def path_to_track(track_name)
     courses_main_path(:track => track_name)
   end

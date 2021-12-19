@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post 'courses/comment'
   post 'courses/main'
   post 'courses/add'
+  get 'courses/add'
 
   # user authentication
   resources :users, only: [:new, :create]

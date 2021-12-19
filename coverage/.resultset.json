@@ -1,12 +1,12 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/wws/Desktop/4995/WikiCourse/features/support/paths.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/features/support/paths.rb": {
         "lines": [
           1,
           1,
           null,
-          21,
+          23,
           null,
           4,
           null,
@@ -20,28 +20,33 @@
           1,
           null,
           null,
-          2,
+          3,
           null,
           null,
-          5,
+          1,
+          null,
+          null,
+          6,
           null,
           null,
           null,
           1,
+          null,
           null,
           null,
           0,
           null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
           2,
           null,
           null,
-          null,
-          null,
           1,
-          1,
-          null,
-          1,
-          4,
+          5,
           null,
           null,
           1,
@@ -103,17 +108,17 @@
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/features/step_definitions/course_planning_steps.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/features/step_definitions/course_planning_steps.rb": {
         "lines": [
           1,
-          14,
-          70,
+          16,
+          80,
           null,
           null,
           null,
           1,
-          14,
-          14,
+          16,
+          0,
           null,
           null,
           null,
@@ -122,15 +127,19 @@
           null,
           null,
           1,
-          2,
-          null,
-          null,
-          1,
           3,
           null,
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          2,
           null,
           null,
           1,
@@ -164,7 +173,7 @@
           null,
           null,
           1,
-          6,
+          7,
           null,
           null,
           1,
@@ -176,7 +185,21 @@
           null,
           null,
           1,
-          2,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          3,
+          3,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -184,39 +207,29 @@
           null,
           null,
           1,
-          2,
-          2,
+          3,
           null,
           null,
           1,
-          null,
           1,
           null,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/course.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/user.rb": {
-        "lines": [
-          1,
           null,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/application_record.rb": {
-        "lines": [
+          null,
           1,
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/courses_controller.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/course.rb": {
         "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/courses_controller.rb": {
+        "lines": [
+          1,
+          null,
           1,
           null,
           1,
@@ -226,63 +239,102 @@
           null,
           null,
           1,
-          13,
+          14,
           null,
-          13,
+          14,
           null,
-          13,
+          14,
           null,
-          13,
+          14,
           null,
-          13,
+          14,
           null,
-          13,
-          null,
-          null,
-          13,
-          null,
-          13,
+          14,
           null,
           null,
-          13,
-          7,
+          14,
+          null,
+          14,
+          null,
+          null,
+          14,
+          8,
           null,
           6,
+          null,
+          null,
+          14,
+          null,
+          0,
           null,
           null,
           null,
           null,
           1,
-          6,
-          6,
-          6,
+          9,
+          9,
+          9,
           null,
           null,
           1,
           0,
+          null,
+          null,
+          null,
+          null,
+          null,
           0,
-          0,
-          0,
+          null,
+          null,
           null,
           0,
           null,
           0,
           null,
-          0,
-          0,
+          null,
+          null,
+          null,
           null,
           0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null,
           null,
           null,
           1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          2,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
           null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/application_controller.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -291,11 +343,11 @@
           1,
           null,
           1,
-          33,
+          46,
           null,
           null,
           1,
-          7,
+          8,
           null,
           null,
           1,
@@ -305,36 +357,42 @@
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/helpers/application_helper.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/helpers/courses_helper.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/helpers/courses_helper.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/helpers/sessions_helper.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/helpers/planner_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/helpers/users_helper.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/helpers/sessions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/track.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/track.rb": {
         "lines": [
           1,
           1,
-          33,
+          35,
           null,
           null,
           null,
@@ -347,13 +405,27 @@
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/comment.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/comment.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/sessions_controller.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           null,
@@ -363,13 +435,14 @@
           1,
           null,
           null,
+          1,
+          null,
+          1,
           1,
           0,
           0,
-          0,
           null,
-          null,
-          0,
+          1,
           null,
           null,
           null,
@@ -381,17 +454,39 @@
           null,
           1,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          3,
+          3,
+          3,
           null,
           null
         ]
       }
     },
-    "timestamp": 1638398985
+    "timestamp": 1639902059
   },
   "RSpec": {
     "coverage": {
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/courses_controller.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/courses_controller.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          null,
           1,
           null,
           1,
@@ -423,6 +518,11 @@
           2,
           null,
           null,
+          4,
+          null,
+          0,
+          null,
+          null,
           null,
           null,
           1,
@@ -433,237 +533,326 @@
           null,
           1,
           0,
-          0,
-          0,
-          0,
           null,
-          0,
           null,
-          0,
           null,
-          0,
-          0,
+          null,
           null,
           0,
           null,
           null,
           null,
+          0,
           null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/helpers/sessions_helper_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/helpers/users_helper_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/models/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/user.rb": {
-        "lines": [
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/requests/sessions_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/requests/users_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
           0,
           null,
           null,
           null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/views/sessions/create.html.erb_spec.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/views/sessions/login.html.erb_spec.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/helpers/planner_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/helpers/sessions_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/helpers/users_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/requests/planner_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/requests/sessions_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/views/sessions/new.html.erb_spec.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/requests/users_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/views/sessions/welcome.html.erb_spec.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/planner/main.html.erb_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/views/users/create.html.erb_spec.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/sessions/create.html.erb_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/spec/views/users/new.html.erb_spec.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/sessions/login.html.erb_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          null,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/course.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/sessions/new.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/sessions/welcome.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/users/create.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/spec/views/users/new.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/course.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/comment.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/comment.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/models/track.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/models/track.rb": {
         "lines": [
           1,
           1,
@@ -680,7 +869,7 @@
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/sessions_controller.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           null,
@@ -691,12 +880,13 @@
           null,
           null,
           1,
-          1,
-          1,
+          null,
+          0,
+          0,
+          0,
           0,
           null,
-          null,
-          1,
+          0,
           null,
           null,
           null,
@@ -712,7 +902,7 @@
           null
         ]
       },
-      "/Users/wws/Desktop/4995/WikiCourse/app/controllers/users_controller.rb": {
+      "/Users/wws/Desktop/4995/final/WikiCourse/app/controllers/users_controller.rb": {
         "lines": [
           1,
           null,
@@ -723,7 +913,7 @@
           null,
           null,
           1,
-          1,
+          0,
           0,
           0,
           null,
@@ -731,6 +921,6 @@
         ]
       }
     },
-    "timestamp": 1638396207
+    "timestamp": 1639902063
   }
 }

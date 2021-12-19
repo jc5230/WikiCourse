@@ -114,7 +114,9 @@
             <%= course.description.length >= 100 ? course.description[0..100].gsub(/\s\w+\s*$/, '...') : course.description %>
           </td>
           <td>
-            <%= button_to 'add' , courses_add_path(number: course.number) %>
+            <div  id = "<%= "add_"+course.number.split(' ').join('_') %>">
+              <%= button_to 'add' , courses_add_path(number: course.number) %>
+            </div>
           </td>
           <td hidden=true>
             <%= course.track %>

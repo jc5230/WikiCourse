@@ -32,9 +32,9 @@ nil] : [@breadth1, @breadth2, @breadth3]
     else
       @courses = Course.where(track: @track, breadth: @breadth, required: @required, elective: @elective)
     end
-    puts(params[:add])
+    # puts(params[:add])
     if params[:add] !=nil
-      puts(params[:add])
+      # puts(params[:add])
       User_courses.create(username: :current_user,course_number: params[:add])
     end
 
@@ -52,14 +52,13 @@ nil] : [@breadth1, @breadth2, @breadth3]
     #  @courses = Course.where(number: @number).limit(1)
 
     # puts(@courses[0].title)
-    if session[:added_courses] == nil
-      session[:added_courses] = []
-    end
-    session[:added_courses].append(@number)
+    
+    session[:added_courses] = session[:added_courses] == nil ? [] : session[:added_courses] + [@number]
+ 
     
 
     arr = []
-    @title = "title"
+    # @title = "title"
     session[:added_courses].each do |course|
       #puts("-----------------")
       #puts(course.class)
@@ -68,13 +67,10 @@ nil] : [@breadth1, @breadth2, @breadth3]
       #if course.class==Course || course.class==Hash
       arr.append(course)
       #end
-
-
     end 
-    arr = arr.to_set
-    session[:added_courses] = arr
-    puts("---length----")
-    puts(session[:added_courses].length)
+    session[:added_courses] = arr.to_set
+    # puts("---length----")
+    # puts(session[:added_courses].length)
 
 
     
@@ -84,11 +80,11 @@ nil] : [@breadth1, @breadth2, @breadth3]
 
   def comment
     @call = params[:call]
-    @title = Course.find_by_call(@call).title
+    @title = Course.find_by_call(@call) ? Course.find_by_call(@call).title : "INTRODUCTION TO DATABASES" # use default value
     if session[:user_id]
       user_id = session[:user_id]
     else
-      puts('not login') # TODO: redirect to welcome page?
+      # puts('not login') # TODO: redirect to welcome page?
     end
     puts(user_id)
 
